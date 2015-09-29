@@ -1,0 +1,21 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">©
+          {{ site.author.name }}
+          &nbsp;&bull;&nbsp;
+          {{ site.time | date: '%Y' }}
+
+          {% if site.url-pretty %}
+          &nbsp;&bull;&nbsp;
+          <a href="mailto:mark@codecornerapps.com">mark@codecornerapps.com</a>
+          {% endif %}
+        </p>
+        <p class="theme-by text-muted">
+          Powered by <a href="http://jekyllrb.com/">Jekyll</a> using the wonderful <a href="https://github.com/daattali/beautiful-jekyll">beautiful-jekyll</a> theme
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

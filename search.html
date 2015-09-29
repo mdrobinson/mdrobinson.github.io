@@ -1,0 +1,26 @@
+---
+layout: page
+title:
+css: "/css/index.css"
+
+permalink: /search/
+---
+
+{% raw %}
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+    <article>
+      <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+        <a href="{{url}}">{{title}}</a>
+      </h3>
+    </article>
+  {{/entries}}
+</script>
+{% endraw %}
+
+<div class="index-posts-title">Search results</div>
+
+<section id="search-results" style="display: none;">
+  <div class="entries"></div>
+</section>

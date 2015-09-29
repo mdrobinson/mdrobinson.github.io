@@ -1,0 +1,40 @@
+---
+layout: default
+title: 404 - Page not found
+---
+
+<div class="text-center">
+  <h1>Whoops, this page doesn't exist.</h1>
+  <h1>404: Not Found</h1>
+  <br/>
+  <div class="youtube-container">
+     <div class="youtube-player" data-id="t3otBjVZzT0"></div>
+  </div>
+</div>
+
+<script>
+(function() {
+    var v = document.getElementsByClassName("youtube-player");
+    for (var n = 0; n < v.length; n++) {
+        var p = document.createElement("div");
+        p.innerHTML = labnolThumb(v[n].dataset.id);
+        p.onclick = labnolIframe;
+        v[n].appendChild(p);
+    }
+})();
+
+function labnolThumb(id) {
+    return '<img width="50%" height="315" class="youtube-thumb" src="//i.ytimg.com/vi/' + id + '/hqdefault.jpg"><div class="play-button"></div>';
+}
+
+function labnolIframe() {
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute("width", "50%");
+    iframe.setAttribute("height", "315")
+    iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.parentNode.dataset.id + "?autoplay=1&autohide=2&border=0&wmode=transparent&enablejsapi=1&controls=0&showinfo=0");
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "1");
+    iframe.setAttribute("id", "youtube-iframe");
+    this.parentNode.replaceChild(iframe, this);
+}
+</script>
