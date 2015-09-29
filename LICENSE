@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 The MIT License (MIT)
 
 Copyright (c) 2015 Dean Attali
@@ -21,6 +22,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 =======
+=======
+>>>>>>> 77b40b833fdaaebbb823a3c27a22c9f6b336c93f
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 
@@ -361,4 +364,7 @@ consider it more useful to permit linking proprietary applications with the
 library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.
 
+<<<<<<< HEAD
 >>>>>>> 409823619a4ba602822acbad937a375b06248fb6
+=======
+>>>>>>> 77b40b833fdaaebbb823a3c27a22c9f6b336c93f
