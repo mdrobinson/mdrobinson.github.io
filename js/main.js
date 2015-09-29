@@ -132,6 +132,8 @@ $("#search-query").on('blur', function () {
 $("#about").click(function() {
   if (window.location.href.indexOf("-") != -1) {
     window.location.href = "/?about"
+  }else if (window.location.href.indexOf('?') != -1) {
+    window.location.href = "/"
   }
 
   if ($("#preview-posts").hasClass("currentPage")) {
@@ -146,7 +148,7 @@ $("#about").click(function() {
 });
 
 $("#home").click(function() {
-  if (window.location.href.indexOf("-") != -1 || window.location.href.indexOf('?about') != -1){
+  if (window.location.href.indexOf("-") != -1 || window.location.href.indexOf('?') != -1){
     window.location.href = "/"
   }
 
