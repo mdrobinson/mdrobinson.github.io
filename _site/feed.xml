@@ -3,8 +3,8 @@
   <channel>
     <title>Mark Robinson</title>
     <description>It&#39;s kinda fun to build the engaging future</description>
-    <link>http://blog.codecornerapps.com/</link>
-    <atom:link href="http://blog.codecornerapps.com//feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://mdrobinson.github.io</link>
+    <atom:link href="http://mdrobinson.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>First post!</title>
@@ -16,8 +16,8 @@ This is my first post, how exciting!
 
         </description>
         <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://blog.codecornerapps.com//2015-09-29-first-post</link>
-        <guid isPermaLink="true">http://blog.codecornerapps.com//2015-09-29-first-post</guid>
+        <link>http://mdrobinson.github.io/2015-09-29-first-post</link>
+        <guid isPermaLink="true">http://mdrobinson.github.io/2015-09-29-first-post</guid>
       </item>
     
   </channel>
