@@ -130,7 +130,7 @@ $("#search-query").on('blur', function () {
 });
 
 $("#about").click(function() {
-  if (window.location.href.indexOf('-') != -1 || window.location.href.indexOf('?q')) {
+  if (window.location.href.indexOf('-') != -1 || window.location.href.indexOf('?q') != -1) {
     window.location.href = "/?about"
   }else if (window.location.href.indexOf('?') != -1 && window.location.href.indexOf('?about') == -1) {
     window.location.href = "/"
