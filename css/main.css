@@ -2,10 +2,10 @@
 
 /* --- General --- */
 
-.social-buttons-left div, .social-buttons-right div {
-  -webkit-transition: margin .5s ease-in-out;
-  -moz-transition: margin .5s ease-in-out;
-  transition: margin .5s ease-in-out;
+.social-buttons-left div, .social-buttons-right div, .social-buttons-left div li a, .social-buttons-right div li a {
+  -webkit-transition: margin .5s ease-in-out, padding .5s ease-in-out;
+  -moz-transition: margin .5s ease-in-out, padding .5s ease-in-out;
+  transition: margin .5s ease-in-out, padding .5s ease-in-out;
 }
 
 .social-buttons-left div {
@@ -595,11 +595,11 @@ footer .theme-by {
   background: #404040;
   border-radius: 3px;
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
 
   transform: rotate(-45deg);
   -webkit-transition: all 200ms ease;
-          transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 .search.active,
 .search:hover {
