@@ -2,34 +2,27 @@
 
 /* --- General --- */
 
-.social-buttons-left div {
-  margin-left: -139%;
+.social-buttons-left div, .social-buttons-right div {
   -webkit-transition: margin .5s ease-in-out;
   -moz-transition: margin .5s ease-in-out;
   transition: margin .5s ease-in-out;
 }
 
-.social-buttons-left.top-nav-short div {
-  margin-left: -73.5%;
-  -webkit-transition: margin .5s ease-in-out;
-  -moz-transition: margin .5s ease-in-out;
-  transition: margin .5s ease-in-out;
+.social-buttons-left div {
+  margin-left: -139%;
 }
 
 .social-buttons-right div {
-  margin-left: 35%;
+  margin-left: 75%;
   width: 135px;
-  -webkit-transition: margin .5s ease-in-out;
-  -moz-transition: margin .5s ease-in-out;
-  transition: margin .5s ease-in-out;
+}
+
+.social-buttons-left.top-nav-short div {
+  margin-left: -74%;
 }
 
 .social-buttons-right.top-nav-short div {
-  margin-left: 0%;
   width: 135px;
-  -webkit-transition: margin .5s ease-in-out;
-  -moz-transition: margin .5s ease-in-out;
-  transition: margin .5s ease-in-out;
 }
 
 .social-buttons-left div li a, .social-buttons-right div li a {
@@ -42,57 +35,42 @@
   left: 500%
 }
 
-.social-buttons-right {
-  margin-left: 3.5%
-}
-
 @media only screen and (min-width: 768px) {
-  .social-buttons-left div li a {
+  .social-buttons-left div li a, .social-buttons-right div li a {
     opacity: 1;
     padding: 15px 0px
   }
-}
 
-@media only screen and (min-width: 870px) {
-  .social-buttons-left div li a {
-    opacity: 1;
-    padding: 15px 5px
+  .social-buttons-right.top-nav-short div {
+    margin-left: 26%;
   }
-}
 
-@media only screen and (min-width: 1050px) {
-  .social-buttons-left div li a {
-    opacity: 1;
-    padding: 15px 15px
-  }
-}
-
-@media only screen and (min-width: 1100px) {
-  .social-buttons-right div li a {
-    opacity: 1;
-    padding: 15px 0px
-  }
-}
-
-@media only screen and (min-width: 1135px) {
-  .social-buttons-right div li a {
-    opacity: 1;
-    padding: 15px 5px
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .social-buttons-right div li a {
-    opacity: 1;
-    padding: 15px 15px
-  }
-}
-
-@media only screen and (min-width: 768px) {
   .social-buttons-left, .social-buttons-right{
     margin-top: -55px;
     position: absolute;
     left: 50%;
+  }
+}
+
+@media only screen and (min-width: 870px) {
+  .social-buttons-left div li a, .social-buttons-right div li a {
+    opacity: 1;
+    padding: 15px 5px
+  }
+
+  .social-buttons-right.top-nav-short div {
+    margin-left: 34%;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .social-buttons-left div li a, .social-buttons-right div li a {
+    opacity: 1;
+    padding: 15px 15px
+  }
+
+  .social-buttons-right.top-nav-short div {
+    margin-left: 50%;
   }
 }
 
