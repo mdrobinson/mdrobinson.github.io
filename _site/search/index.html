@@ -2,7 +2,6 @@
 <html lang="en">
 
   <head>
-  <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
@@ -14,7 +13,7 @@
 
   
 
-  <link rel="shortcut icon" type="image/x-icon" href="http://mdrobinson.github.io/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="http://blog.codecornerapps.com/favicon.ico">
 
   <link rel="alternate" type="application/rss+xml" title="Mark Robinson - It's kinda fun to build the engaging future" href="/feed.xml" />
 
@@ -43,10 +42,6 @@
   
 
   
-    
-      <link rel="stylesheet" href="/css/index.css" />
-    
-  
 
   
 
@@ -58,11 +53,11 @@
   <meta property="og:type" content="website" />
 
   
-  <meta property="og:url" content="http://mdrobinson.github.io/search/" />
+  <meta property="og:url" content="http://blog.codecornerapps.com/search/" />
   
 
   
-  <meta property="og:image" content="http://mdrobinson.github.io/img/close_up.png" />
+  <meta property="og:image" content="http://blog.codecornerapps.com/img/close_up.png" />
   
 
 </head>
@@ -79,7 +74,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://mdrobinson.github.io">Mark Robinson</a>
+      <a class="navbar-brand" href="http://blog.codecornerapps.com">Mark Robinson</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -110,8 +105,8 @@
         
         <div class="avatar-container">
           <div class="avatar-img-border">
-            <a href="http://mdrobinson.github.io ">
-              <img class="avatar-img" src="/img/close_up.png" />
+            <a href="http://blog.codecornerapps.com ">
+              <img width="100px" height="106px" class="avatar-img" src="/img/close_up.png" />
             </a>
           </div>
         </div>
@@ -416,7 +411,33 @@
 <div class="container" role="main">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      
+      <<style media="screen">
+  .header-section.has-img .no-img {
+    margin-top: 0;
+    background: #FCFCFC;
+    margin: 0 0 40px;
+    padding: 20px 0;
+    box-shadow: 0 0 5px #AAA;
+  }
+  @media only screen and (max-width: 365px) {
+    .header-section.has-img .big-img {
+      margin-bottom: 0;
+    }
+  }
+  .index-posts-title {
+    font-weight: 800;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 38px;
+  }
+  @media only screen and (min-width: 768px) {
+    .index-posts-title {
+      margin-top: 10px;
+      font-size: 45px;
+    }
+  }
+</style>
+
+
 <script id="search-results-template" type="text/mustache">
   {{#entries}}
     <article>
@@ -493,7 +514,7 @@
 
 
 	<!-- Google Analytics -->
-	<script>
+	<script async>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -502,6 +523,7 @@
 		ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
+
 
 
 

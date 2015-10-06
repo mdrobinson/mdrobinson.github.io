@@ -3,7 +3,7 @@
   
     
     <url>
-      <loc>http://mdrobinson.github.io/2015-09-29-first-post</loc>
+      <loc>http://blog.codecornerapps.com/2015-09-29-first-post</loc>
       
         <lastmod>2015-09-29T00:00:00-04:00</lastmod>
       
@@ -19,24 +19,9 @@
   
     
     <url>
-      <loc>http://mdrobinson.github.io/404.html</loc>
+      <loc>http://blog.codecornerapps.com/404.html</loc>
       
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://mdrobinson.github.io/about/</loc>
-      
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
+        <lastmod>2015-10-05T23:55:19-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -49,24 +34,9 @@
   
     
     <url>
-      <loc>http://mdrobinson.github.io/aboutme.html</loc>
+      <loc>http://blog.codecornerapps.com/about/</loc>
       
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://mdrobinson.github.io/aboutme.sync-conflict-20151003-195448.html</loc>
-      
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
+        <lastmod>2015-10-05T23:55:19-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -79,24 +49,9 @@
   
     
     <url>
-      <loc>http://mdrobinson.github.io/contact.sync-conflict-20151003-195449.html</loc>
+      <loc>http://blog.codecornerapps.com/feed.xml</loc>
       
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://mdrobinson.github.io/feed.xml</loc>
-      
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
+        <lastmod>2015-10-05T23:55:19-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -109,24 +64,9 @@
   
     
     <url>
-      <loc>http://mdrobinson.github.io/</loc>
+      <loc>http://blog.codecornerapps.com/</loc>
       
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://mdrobinson.github.io/index.sync-conflict-20151003-195424.html</loc>
-      
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
+        <lastmod>2015-10-05T23:55:19-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -139,9 +79,9 @@
   
     
     <url>
-      <loc>http://mdrobinson.github.io/search/</loc>
+      <loc>http://blog.codecornerapps.com/search/</loc>
       
-        <lastmod>2015-10-03T23:31:08-04:00</lastmod>
+        <lastmod>2015-10-05T23:55:19-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
