@@ -67,22 +67,26 @@
 .type-csharp .highlight .nn{color:#000000}
 .type-csharp .highlight .s{color:#A31515}
 .type-csharp .highlight .sc{color:#A31515}
-.social-buttons-left div, .social-buttons-right div, .social-buttons-left div li a, .social-buttons-right div li a{-webkit-transition:margin .5s ease-in-out, padding .5s ease-in-out;-moz-transition:margin .5s ease-in-out, padding .5s ease-in-out;transition:margin .5s ease-in-out, padding .5s ease-in-out;}
-.social-buttons-left div{margin-left:-139%;}
-.social-buttons-right div{margin-left:75%;width:135px;}
-.social-buttons-left.top-nav-short div{margin-left:-74%;}
-.social-buttons-right.top-nav-short div{width:135px;}
+.social-buttons-left div, .social-buttons-right div, .social-buttons-left div li a, .social-buttons-together div li a{-webkit-transition:margin .5s ease-in-out, padding .5s ease-in-out;-moz-transition:margin .5s ease-in-out, padding .5s ease-in-out;transition:margin .5s ease-in-out, padding .5s ease-in-out;}
+.social-buttons-left div{margin-left:-130%;}
+.social-buttons-right div{width:135px;}
+.social-buttons-left.top-nav-short div{margin-left:-69%;}
 .social-buttons-left div li a, .social-buttons-right div li a{opacity:0}
+.social-buttons-together{margin-top:-55px;position:absolute;left:38.4%; display: none;}
 .social-buttons-left, .social-buttons-right{margin-top:-55px;position:absolute;left:500%}
-@media only screen and (min-width:768px){.social-buttons-left div li a, .social-buttons-right div li a{opacity:1;padding:15px 0px}
-.social-buttons-right.top-nav-short div{margin-left:26%;}
-.social-buttons-left, .social-buttons-right{margin-top:-55px;position:absolute;left:50%;}
+@media only screen and (min-width:768px){
+	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 0px}
+	.social-buttons-together{display: block;}
+	.social-buttons-left, .social-buttons-right{margin-top:-55px;position:absolute;left:50%;}
+	.social-buttons-right div{margin-left:52.5px;}
 }
-@media only screen and (min-width:870px){.social-buttons-left div li a, .social-buttons-right div li a{opacity:1;padding:15px 5px}
-.social-buttons-right.top-nav-short div{margin-left:34%;}
+@media only screen and (min-width:930px){
+	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 5px}
+	.social-buttons-right div{margin-left:65px;}
 }
-@media only screen and (min-width:1050px){.social-buttons-left div li a, .social-buttons-right div li a{opacity:1;padding:15px 15px}
-.social-buttons-right.top-nav-short div{margin-left:50%;}
+@media only screen and (min-width:1200px){
+	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 15px}
+	.social-buttons-right div{margin-left:99px;}
 }
 body{font-family:'Andada', 'Times New Roman', serif;font-size:18px;color:#333;position:relative;background:#FFF;}
 p{line-height:1.75;margin:30px 0;}
@@ -221,3 +225,51 @@ div.play-button{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin
 #youtube-iframe{width:100%;height:100%;position:absolute;top:0;left:0;}
 body::-webkit-scrollbar{width:7px;}
 body::-webkit-scrollbar-thumb{background:darkcyan}
+
+
+.share-buttons-label {
+	color: #ccc;
+	font-weight: bold;
+}
+
+.custom-social-buttons
+{
+	margin-bottom: 100px;
+}
+
+ .custom-social-button
+ {
+ 	height: 30px;
+ 	border-left: 1px solid #ccc;
+ 	width: 33.333%;
+ 	text-align: center;
+ 	float: left;
+ }
+
+ .custom-social-button.googleplus
+ {
+ 	border-right: 1px solid #ccc;
+  float: right;
+ }
+
+ .custom-social-button a
+ {
+ 	vertical-align: middle;
+ 	color: #ccc;
+ 	font-weight: bold;
+ }
+
+ .custom-social-button a i
+ {
+ 	display: block;
+ 	width: 100%;
+ 	height: 100%;
+ 	line-height: 30px;
+ }
+
+ .custom-social-button a:hover
+ {
+ 	vertical-align: middle;
+ 	color: #555;
+ 	font-weight: bold;
+ }

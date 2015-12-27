@@ -37,9 +37,9 @@ navbar-links:
 author:
   name: Mark Robinson
   email: "mark@codecornerapps.com"
-  facebook: Mr.MarkDavidRobinson  # eg. daattali
-  github: mdrobinson    # eg. daattali
-  twitter: yourname   # eg. daattali
+  facebook: robinm8  # eg. daattali
+  github: robinm8    # eg. daattali
+  twitter: robinm8_   # eg. daattali
   linkedin: in/robinm8  # eg. "pub/dean-attali/8/946/143"
   stackoverflow: "users/5380730/mark"  # eg. "users/3943160/daattali"
 
@@ -48,7 +48,7 @@ footer-links-active:
   rss: true
   facebook: true
   email: true
-  twitter: false
+  twitter: true
   github: true
   linkedin: true
   stackoverflow: true
@@ -82,6 +82,7 @@ defaults:
       type: "posts"
     values:
       comments: true  # add comments to all blog posts
+      shareable: true
   -
     scope:
       path: "" # all files
@@ -109,3 +110,5 @@ prose:
 gems:
   - jekyll-lunr-js-search
   - jekyll-sitemap
+  - jekyll-gallery-generator
+  - jekyll-categories
