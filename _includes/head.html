@@ -1,6 +1,6 @@
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   {% if page.meta-title %}
   <title>{{ page.meta-title }}</title>
@@ -10,100 +10,81 @@
   <title>{{ site.title }}</title>
   {% endif %}
 
-  <meta name="author" content="{{ site.author.name }}" />
+  <meta name=author content="{{ site.author.name }}" />
 
   {% if page.meta-description %}
-  <meta name="description" content="{{ page.meta-description }}">
+  <meta name=description content="{{ page.meta-description }}">
   {% elsif page.subtitle %}
   <meta name="description" content="{{ page.subtitle }}">
   {% endif %}
 
   <link rel="shortcut icon" type="image/x-icon" href="{{site.url}}/favicon.ico">
 
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  <link rel=alternate type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-  <style>
-    .header-section.has-img .no-img {
-      margin-top: 0;
-      background: #FCFCFC;
-      margin: 0 0 40px;
-      padding: 20px 0;
-      box-shadow: 0 0 5px #AAA;
-    }
-    @media only screen and (max-width: 365px) {
-      .header-section.has-img .big-img {
-        margin-bottom: 0;
-      }
-    }
-    .index-posts-title {
-      font-weight: 800;
-      font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 38px;
-    }
-    @media only screen and (min-width: 768px) {
-      .index-posts-title {
-        margin-top: 10px;
-        font-size: 45px;
-      }
-    }
-  </style>
+  <style>.header-section.has-img .no-img{margin-top:0;background:#FCFCFC;margin:0 0 40px;padding:20px 0;box-shadow:0 0 5px #AAA;}
+  @media only screen and (max-width:365px){.header-section.has-img .big-img{margin-bottom:0;}
+  }
+  .index-posts-title{font-weight:800;font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:38px;}
+  @media only screen and (min-width:768px){.index-posts-title{margin-top:10px;font-size:45px;}
+  }</style>
 
   {% if page.common-ext-css %}
     {% for css in page.common-ext-css %}
-      <link rel="stylesheet" href="{{ css }}" />
+      <link rel=stylesheet href="{{ css }}" />
     {% endfor %}
   {% endif %}
 
   {% if page.common-css %}
     {% for css in page.common-css %}
-      <link rel="stylesheet" href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
+      <link rel=stylesheet href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
     {% endfor %}
   {% endif %}
 
   {% if page.common-googlefonts %}
     {% for font in page.common-googlefonts %}
-	  <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ font }}" />
+	  <link rel=stylesheet href="//fonts.googleapis.com/css?family={{ font }}" />
     {% endfor %}
   {% endif %}
 
   {% if page.ext-css %}
     {% for css in page.ext-css %}
-      <link rel="stylesheet" href="{{ css }}" />
+      <link rel=stylesheet href="{{ css }}" />
     {% endfor %}
   {% endif %}
 
   {% if page.css %}
     {% for css in page.css %}
-      <link rel="stylesheet" href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
+      <link rel=stylesheet href="{{ css | prepend: site.baseurl | replace: '//', '/' }}" />
     {% endfor %}
   {% endif %}
 
   {% if page.googlefonts %}
     {% for font in page.googlefonts %}
-	  <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ font }}" />
+	  <link rel=stylesheet href="//fonts.googleapis.com/css?family={{ font }}" />
     {% endfor %}
   {% endif %}
 
   <!-- Facebook OpenGraph tags -->
   {% if page.meta-title %}
-  <meta property="og:title" content="{{ page.meta-title }}" />
+  <meta property=og:title content="{{ page.meta-title }}" />
   {% elsif page.title %}
-  <meta property="og:title" content="{{ page.title }}" />
+  <meta property=og:title content="{{ page.title }}" />
   {% else %}
-  <meta property="og:title" content="{{ site.title }}" />
+  <meta property=og:title content="{{ site.title }}" />
   {% endif %}
 
-  <meta property="og:type" content="website" />
+  <meta property=og:type content="website" />
 
   {% if page.id %}
-  <meta property="og:url" content="{{ site.url }}{{ page.url }}/" />
+  <meta property=og:url content="{{ site.url }}{{ page.url }}/" />
   {% else %}
-  <meta property="og:url" content="{{ site.url }}{{ page.url | remove: '/index.html' | remove: '.html' }}" />
+  <meta property=og:url content="{{ site.url }}{{ page.url | remove: '/index.html' | remove: '.html' }}" />
   {% endif %}
 
   {% if page.fb-img %}
-  <meta property="og:image" content="{{ page.fb-img }}" />
+  <meta property=og:image content="{{ page.fb-img }}" />
   {% else %}
-  <meta property="og:image" content="{{ site.url }}{{ site.avatar }}" />
+  <meta property=og:image content="{{ site.url }}{{ site.avatar }}" />
   {% endif %}
 </head>

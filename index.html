@@ -6,7 +6,7 @@ meta-title: "Mark Robinson"
 ---
 
 {% raw %}
-<script id="search-results-template" type="text/mustache">
+<script id=search-results-template type="text/mustache">
 {{#entries}}
 <article>
 <h3>
@@ -18,12 +18,12 @@ meta-title: "Mark Robinson"
 </script>
 {% endraw %}
 
-<section id="search-results" style="display: none;">
-  <div class="index-posts-title">Search results</div>
-  <div class="entries"></div>
+<section id=search-results style=display:none>
+  <div class=index-posts-title>Search results</div>
+  <div class=entries></div>
 </section>
 
-<div id = "about-me" style="display:none">
+<div id=about-me style=display:none>
   <p>
     I am a computer science major at <a href="https://www.google.com/maps/place/Rensselaer+Polytechnic+Institute">Rensselaer Polytechnic Institute</a> in Troy, New York.
   </p>
@@ -38,29 +38,28 @@ meta-title: "Mark Robinson"
   </p>
 </div>
 
-<div class = "currentPage" id = "preview-posts" style="display:block">
-  <div class="index-posts-title">Blog posts:</div>
-
-  <div class="posts-list">
+<div class = currentPage id = preview-posts style=display:block>
+  <div class=index-posts-title>Blog posts:</div>
+  <div class=posts-list>
     {% for post in paginator.posts %}
-    <article class="post-preview">
+    <article class=post-preview>
       <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">{{ post.title }}</h2>
+        <h2 class=post-title>{{ post.title }}</h2>
 
         {% if post.subtitle %}
-        <h3 class="post-subtitle">
+        <h3 class=post-subtitle>
           {{ post.subtitle }}
         </h3>
         {% endif %}
       </a>
 
-      <p class="post-meta">
+      <p class=post-meta>
         Posted on {{ post.date | date: "%B %-d, %Y" }}
       </p>
 
-      <div class="post-entry">
+      <div class=post-entry>
         {{ post.content | truncatewords: 50 | strip_html}}
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
+        <a href="{{ post.url | prepend: site.baseurl }}" class=post-read-more>[Read&nbsp;More]</a>
       </div>
 
     </article>
@@ -70,12 +69,12 @@ meta-title: "Mark Robinson"
   {% if paginator.total_pages > 1 %}
   <ul class="pager main-pager">
     {% if paginator.previous_page %}
-    <li class="previous">
+    <li class=previous>
       <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
     </li>
     {% endif %}
     {% if paginator.next_page %}
-    <li class="next">
+    <li class=next>
       <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
     </li>
     {% endif %}
