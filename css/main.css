@@ -70,23 +70,24 @@
 .social-buttons-left div, .social-buttons-right div, .social-buttons-left div li a, .social-buttons-together div li a{-webkit-transition:margin .5s ease-in-out, padding .5s ease-in-out;-moz-transition:margin .5s ease-in-out, padding .5s ease-in-out;transition:margin .5s ease-in-out, padding .5s ease-in-out;}
 .social-buttons-left div{margin-left:-130%;}
 .social-buttons-right div{width:135px;}
-.social-buttons-left.top-nav-short div{margin-left:-69%;}
+.social-buttons-left.top-nav-short div{margin-left:-70%;}
 .social-buttons-left div li a, .social-buttons-right div li a{opacity:0}
-.social-buttons-together{margin-top:-55px;position:absolute;left:38.4%; display: none;}
+.social-buttons-together{margin-top:-55px;position:absolute;left:50%; display: none;}
 .social-buttons-left, .social-buttons-right{margin-top:-55px;position:absolute;left:500%}
 @media only screen and (min-width:768px){
-	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 0px}
 	.social-buttons-together{display: block;}
+	.social-buttons-together div{margin-left:-50%}
+	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 0px}
 	.social-buttons-left, .social-buttons-right{margin-top:-55px;position:absolute;left:50%;}
-	.social-buttons-right div{margin-left:52.5px;}
+	.social-buttons-right div{margin-left:51.2px;}
 }
 @media only screen and (min-width:930px){
 	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 5px}
-	.social-buttons-right div{margin-left:65px;}
+	.social-buttons-right div{margin-left:66px;}
 }
 @media only screen and (min-width:1200px){
 	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 15px}
-	.social-buttons-right div{margin-left:99px;}
+	.social-buttons-right div{margin-left:96.2px;}
 }
 body{font-family:'Andada', 'Times New Roman', serif;font-size:18px;color:#333;position:relative;background:#FFF;}
 p{line-height:1.75;margin:30px 0;}
