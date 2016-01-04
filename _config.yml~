@@ -112,4 +112,3 @@ gems:
   - jekyll-sitemap
   - jekyll-gallery-generator
   - jekyll-categories
-  - jekyll-paginate
