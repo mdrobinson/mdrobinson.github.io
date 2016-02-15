@@ -70,7 +70,7 @@ google_analytics: "UA-53427910-2"
 # Output options (more information on Jekyll's site)
 timezone: "America/New_York"
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /:year-:month-:day-:title
 paginate: 5
 
@@ -110,5 +110,6 @@ prose:
 gems:
   - jekyll-lunr-js-search
   - jekyll-sitemap
-  - jekyll-gallery-generator
   - jekyll-categories
+  - jekyll-paginate
+  - pygments.rb

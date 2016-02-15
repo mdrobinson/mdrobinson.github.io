@@ -3,7 +3,31 @@
 	<script src="{{ js }}"></script>
   {% endfor %}
 {% endif %}
-
+{% if layout.common-ext-js %}
+  {% for js in layout.common-ext-js %}
+	 <script src="{{ js }}"></script>
+  {% endfor %}
+{% endif %}
+{% if page.ext-js %}
+  {% for js in page.ext-js %}
+	<script src="{{ js }}"></script>
+  {% endfor %}
+{% endif %}
+{% if layout.ext-js %}
+  {% for js in layout.ext-js %}
+  <script src="{{ js }}"></script>
+  {% endfor %}
+{% endif %}
+{% if page.js %}
+  {% for js in page.js %}
+	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
+  {% endfor %}
+{% endif %}
+{% if layout.js %}
+  {% for js in layout.js %}
+  <script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
+  {% endfor %}
+{% endif %}
 {% if page.common-js %}
   <script src="{{ '/js/search.min.js' | prepend: site.baseurl | replace: '//', '/' }}"></script>
 
@@ -14,6 +38,7 @@
         var element = document.createElement("script");
         element.src = "{{ js | prepend: site.baseurl | replace: '//', '/' }}";
         document.body.appendChild(element);
+
       }
       if (window.addEventListener)
       window.addEventListener("load", downloadJSAtOnload, false);
@@ -37,15 +62,37 @@
     });
   </script>
 {% endif %}
+{% if layout.common-js %}
+  <script src="{{ '/js/search.min.js' | prepend: site.baseurl | replace: '//', '/' }}"></script>
 
-{% if page.ext-js %}
-  {% for js in page.ext-js %}
-	<script src="{{ js }}"></script>
-  {% endfor %}
-{% endif %}
+  {% for js in layout.common-js %}
+    {% if js != "/js/search.min.js" %}
+      <script type="text/javascript">
+      function downloadJSAtOnload() {
+        var element = document.createElement("script");
+        element.src = "{{ js | prepend: site.baseurl | replace: '//', '/' }}";
+        document.body.appendChild(element);
 
-{% if page.js %}
-  {% for js in page.js %}
-	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
+      }
+      if (window.addEventListener)
+      window.addEventListener("load", downloadJSAtOnload, false);
+      else if (window.attachEvent)
+      window.attachEvent("onload", downloadJSAtOnload);
+      else window.onload = downloadJSAtOnload;
+      </script>
+
+    	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
+    {% endif %}
   {% endfor %}
+
+  <script type="text/javascript">
+    $(function() {
+      $('#search-query').lunrSearch({
+        indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+        results : '#search-results',  // selector for containing search results element
+        entries : '.entries',         // selector for search entries containing element (contained within results above)
+        template: '#search-results-template'  // selector for Mustache.js template
+      });
+    });
+  </script>
 {% endif %}
