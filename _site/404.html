@@ -376,6 +376,16 @@ function labnolIframe() {
 }
 </script>
 
+<script>
+  // On 2016-02-01 GitHub Pages upgraded to Jekyll3. It broke all blog posts and discontinued support for post urls with trailing slashes.
+  // Affected permalinks 404'd. This will internally redirect those permalinks to working pages.
+
+  var url = location.href;
+  if(url.substr(url.length - 1) === '/') {
+    window.location = url.substr(0, url.length - 1);
+  }
+</script>
+
 </div>
 
     <footer>
