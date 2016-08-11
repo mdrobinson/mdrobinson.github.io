@@ -2,9 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mark Robinson</title>
-    <description>It&#39;s kinda fun to build the engaging future</description>
+    <description>It's quite fun to build the engaging future</description>
     <link>http://blog.codecornerapps.com</link>
     <atom:link href="http://blog.codecornerapps.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Comcast Cord Cut</title>
+        <description>
+          
+          Yesterday, I canceled my Comcast triple play subscription. In its place, I bought a Amazon Fire TV stick and subscribed to Sony’s PS Vue. I started to enjoy a life almost entirely free from the grips of Comcast. After reading a lot of reviews online, I bought the beastly Arris...
+        </description>
+        <pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate>
+        <link>http://blog.codecornerapps.com/2016-08-10-comcast-cord-cut</link>
+        <guid isPermaLink="true">http://blog.codecornerapps.com/2016-08-10-comcast-cord-cut</guid>
+      </item>
     
       <item>
         <title>Chromebook Pixel 2015 (LS) Review</title>

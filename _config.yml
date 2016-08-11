@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (username.github.io) then use these settings:
-url: "http://blog.codecornerapps.com"
+url: "https://blog.codecornerapps.com"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -17,7 +17,7 @@ baseurl: ""
 title: Mark Robinson
 
 # Short description of your site
-description: It's kinda fun to build the engaging future
+description: It's quite fun to build the engaging future
 
 # --- Navigation bar options --- #
 
@@ -63,7 +63,7 @@ url-pretty: "blog.codecornerapps.com/"  # eg. "deanattali.com/beautiful-jekyll"
 disqus: "codecornerapps"
 
 # Fill in your Google Analytics ID to track your website using GA
-google_analytics: "UA-53427910-2"
+google_analytics: ""
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
@@ -112,4 +112,3 @@ gems:
   - jekyll-sitemap
   - jekyll-categories
   - jekyll-paginate
-  - pygments.rb
