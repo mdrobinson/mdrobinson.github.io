@@ -3,8 +3,8 @@
   <channel>
     <title>Mark Robinson</title>
     <description>It's quite fun to build the engaging future</description>
-    <link>http://blog.codecornerapps.com</link>
-    <atom:link href="http://blog.codecornerapps.com/feed.xml" rel="self" type="application/rss+xml" />
+    <link>https://blog.codecornerapps.com</link>
+    <atom:link href="https://blog.codecornerapps.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>Comcast Cord Cut</title>
@@ -13,8 +13,8 @@
           Yesterday, I canceled my Comcast triple play subscription. In its place, I bought a Amazon Fire TV stick and subscribed to Sony’s PS Vue. I started to enjoy a life almost entirely free from the grips of Comcast. After reading a lot of reviews online, I bought the beastly Arris...
         </description>
         <pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate>
-        <link>http://blog.codecornerapps.com/2016-08-10-comcast-cord-cut</link>
-        <guid isPermaLink="true">http://blog.codecornerapps.com/2016-08-10-comcast-cord-cut</guid>
+        <link>https://blog.codecornerapps.com/2016-08-10-comcast-cord-cut</link>
+        <guid isPermaLink="true">https://blog.codecornerapps.com/2016-08-10-comcast-cord-cut</guid>
       </item>
     
       <item>
@@ -24,8 +24,8 @@
           Pixel 2015 Unboxing The time is finally right for me to share some thoughts about my 2015 Chromebook Pixel ludicrous speed edition. I’ve been a proud owner of a beautiful Pixel for 6 months now and it’s still my daily driver. I initially asked myself how I could live with...
         </description>
         <pubDate>Sun, 27 Dec 2015 00:00:00 -0500</pubDate>
-        <link>http://blog.codecornerapps.com/2015-12-27-chromebook-pixel-review</link>
-        <guid isPermaLink="true">http://blog.codecornerapps.com/2015-12-27-chromebook-pixel-review</guid>
+        <link>https://blog.codecornerapps.com/2015-12-27-chromebook-pixel-review</link>
+        <guid isPermaLink="true">https://blog.codecornerapps.com/2015-12-27-chromebook-pixel-review</guid>
       </item>
     
       <item>
@@ -38,8 +38,8 @@ This is my first post, how exciting!
 
         </description>
         <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
-        <link>http://blog.codecornerapps.com/2015-09-29-first-post</link>
-        <guid isPermaLink="true">http://blog.codecornerapps.com/2015-09-29-first-post</guid>
+        <link>https://blog.codecornerapps.com/2015-09-29-first-post</link>
+        <guid isPermaLink="true">https://blog.codecornerapps.com/2015-09-29-first-post</guid>
       </item>
     
   </channel>
