@@ -1,98 +1,108 @@
-{% if page.common-ext-js %}
-  {% for js in page.common-ext-js %}
-	<script src="{{ js }}"></script>
-  {% endfor %}
-{% endif %}
 {% if layout.common-ext-js %}
   {% for js in layout.common-ext-js %}
 	 <script src="{{ js }}"></script>
   {% endfor %}
 {% endif %}
-{% if page.ext-js %}
-  {% for js in page.ext-js %}
-	<script src="{{ js }}"></script>
-  {% endfor %}
-{% endif %}
-{% if layout.ext-js %}
-  {% for js in layout.ext-js %}
-  <script src="{{ js }}"></script>
-  {% endfor %}
-{% endif %}
-{% if page.js %}
-  {% for js in page.js %}
-	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
-  {% endfor %}
-{% endif %}
-{% if layout.js %}
-  {% for js in layout.js %}
-  <script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
-  {% endfor %}
-{% endif %}
-{% if page.common-js %}
-  <script src="{{ '/js/search.min.js' | prepend: site.baseurl | replace: '//', '/' }}"></script>
 
-  {% for js in page.common-js %}
-    {% if js != "/js/search.min.js" %}
-      <script type="text/javascript">
-      function downloadJSAtOnload() {
-        var element = document.createElement("script");
-        element.src = "{{ js | prepend: site.baseurl | replace: '//', '/' }}";
-        document.body.appendChild(element);
-
-      }
-      if (window.addEventListener)
-      window.addEventListener("load", downloadJSAtOnload, false);
-      else if (window.attachEvent)
-      window.attachEvent("onload", downloadJSAtOnload);
-      else window.onload = downloadJSAtOnload;
-      </script>
-
-    	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
-    {% endif %}
+{% if layout.common-css %}
+  {% for css in layout.common-css %}
+    <script async defer="defer">
+      var cb = function() {
+        var l = document.createElement('link'); l.rel = 'stylesheet';
+        l.href = "{{ css | prepend: site.baseurl | replace: '//', '/' }}";
+        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+      webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(cb);
+      else window.addEventListener('load', cb);
+    </script>
   {% endfor %}
-
-  <script type="text/javascript">
-    $(function() {
-      $('#search-query').lunrSearch({
-        indexUrl: '/js/index.json',   // Url for the .json file containing search index data
-        results : '#search-results',  // selector for containing search results element
-        entries : '.entries',         // selector for search entries containing element (contained within results above)
-        template: '#search-results-template'  // selector for Mustache.js template
-      });
-    });
-  </script>
 {% endif %}
+
 {% if layout.common-js %}
-  <script src="{{ '/js/search.min.js' | prepend: site.baseurl | replace: '//', '/' }}"></script>
-
-  {% for js in layout.common-js %}
-    {% if js != "/js/search.min.js" %}
-      <script type="text/javascript">
-      function downloadJSAtOnload() {
-        var element = document.createElement("script");
-        element.src = "{{ js | prepend: site.baseurl | replace: '//', '/' }}";
-        document.body.appendChild(element);
-
+  
+  <script async type="text/javascript" defer="defer">
+      function getScript(url,success){
+        var script=document.createElement('script');
+        script.src=url;
+        
+        var head=document.getElementsByTagName('head')[0],
+            done=false;
+            
+        script.onload=script.onreadystatechange = function(){
+          if ( !done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete') ) {
+            done=true;
+            success();
+            script.onload = script.onreadystatechange = null;
+            head.removeChild(script);
+          }
+        };
+        
+        head.appendChild(script);
       }
-      if (window.addEventListener)
-      window.addEventListener("load", downloadJSAtOnload, false);
-      else if (window.attachEvent)
-      window.attachEvent("onload", downloadJSAtOnload);
-      else window.onload = downloadJSAtOnload;
-      </script>
+      
+      getScript("{{ '/js/search.min.js' | prepend: site.baseurl | replace: '//', '/' }}", function() {
+      
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '217893771945954',
+              xfbml      : true,
+              version    : 'v2.7'
+            });
+          };
 
-    	<script src="{{ js | prepend: site.baseurl | replace: '//', '/' }}"></script>
-    {% endif %}
-  {% endfor %}
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+      
+      
+      
+        $('#search-query').lunrSearch({
+          indexUrl: '/js/index.json',   // Url for the .json file containing search index data
+          results : '#search-results',  // selector for containing search results element
+          entries : '.entries',         // selector for search entries containing element (contained within results above)
+          template: '#search-results-template',  // selector for Mustache.js template
+          emptyMsg  : '<p>Nothing found.</p>'     // shown message if search returns no results
+        });
+        
+        getScript("{{ '/js/main.js' | prepend: site.baseurl | replace: '//', '/' }}", function() {
+          getScript("{{ '/js/bootstrap.min.js' | prepend: site.baseurl | replace: '//', '/' }}", function() {
 
-  <script type="text/javascript">
-    $(function() {
-      $('#search-query').lunrSearch({
-        indexUrl: '/js/index.json',   // Url for the .json file containing search index data
-        results : '#search-results',  // selector for containing search results element
-        entries : '.entries',         // selector for search entries containing element (contained within results above)
-        template: '#search-results-template'  // selector for Mustache.js template
+            {% if layout.common-googlefonts %}
+              {% for font in layout.common-googlefonts %}
+                  var cb = function() {
+                    var l = document.createElement('link'); l.rel = 'stylesheet';
+                    l.href = "//fonts.googleapis.com/css?family={{ font }}";
+                    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+                  };
+                  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                  webkitRequestAnimationFrame || msRequestAnimationFrame;
+                  if (raf) raf(cb);
+              {% endfor %}
+            {% endif %}
+            
+            {% if layout.common-ext-css %}
+              {% for css in layout.common-ext-css %}
+                  var cb = function() {
+                    var l = document.createElement('link'); l.rel = 'stylesheet';
+                    l.href = '{{ css }}';
+                    var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+                  };
+                  var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+                  webkitRequestAnimationFrame || msRequestAnimationFrame;
+                  if (raf) raf(cb);
+                  else window.addEventListener('load', cb);
+              {% endfor %}
+            {% endif %}
+          
+          });
+        });       
       });
-    });
+  
   </script>
 {% endif %}

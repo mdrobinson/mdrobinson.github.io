@@ -15,14 +15,18 @@ layout: default
 </script>
 {% endraw %}
 
-<section id=search-results style=display:none>
-  <div class=index-posts-title>Search results</div>
-  <div class=entries></div>
-</section>
 
 <header class="header-post">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    
+    <section id=search-results style=display:none>
+      <div class=index-posts-title>Search results</div>
+      <div class=entries></div>
+      </br>
+    </section>
+
+    
       <div class="post-heading">
         <h1>{{ page.title }}</h1>
         {% if page.subtitle %}
@@ -39,13 +43,14 @@ layout: default
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	  {{ content }}
 	</div>
-  </div>
+  </div>  
 </article>
 
 <div class="row">
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
     <ul class="pager blog-pager">
       {% if page.shareable %}
+      
       <script type="text/javascript">
       	window.onload = function(){
       		var blogDomain = "http%3A%2F%2Fblog.codecornerapps.com";
@@ -80,7 +85,7 @@ layout: default
 
       <div class="custom-social-buttons">
        	<div class="share-buttons-label">
-       		<span>Tell your friends</span>
+       		<h3>Share this post</h3>
        	</div>
        	<div class="custom-social-button twitter">
        		<a id="twitter-link" href="#"><i class="fa fa-twitter"></i></a>
@@ -115,9 +120,19 @@ layout: default
 </div>
 
 {% if page.comments %}
+
+
+
 <div class="row disqus-comments">
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-    {% include disqus.html %}
+    <ul class="pager blog-pager">
+      <h3>Comments</h3>
+    </ul>
+    </br>
+    <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
+  </div>
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="fb-comments" data-href="{{ site.url}}{{ page.url }}" data-width="750" data-include-parent="true"></div>
   </div>
 </div>
 {% endif %}

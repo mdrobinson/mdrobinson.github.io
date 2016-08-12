@@ -108,14 +108,15 @@ var main={
   }
 };
 
-document.addEventListener('DOMContentLoaded',main.init);
 $("#search-query").on('focus',function(){
   $(this).parent('form').parent('label').addClass('active');
 });
+
 $("#search-query").on('blur',function(){
   if($(this).val().length==0)
     $(this).parent('form').parent('label').removeClass('active');
 });
+
 $("#about").click(function(){
   if(window.location.href.indexOf('-')!=-1||window.location.href.indexOf('?q')!=-1){
     window.location.href="/?about"
@@ -130,6 +131,7 @@ $("#about").click(function(){
     });
   }
 });
+
 $("#home").click(function(){
   if(window.location.href.indexOf("-")!=-1||window.location.href.indexOf('?q')!=-1||window.location.href.indexOf('404')!=-1){
     window.location.href="/"
@@ -174,8 +176,9 @@ $(".social-buttons-left")
          $(".social-buttons-right").removeClass("top-nav-short");
        }, 10);
      }
+     
      setTimeout(checkIfButtonsTogetherAndPageTop, 1000);
-
-
  }
+ 
+ main.init();
  checkIfButtonsTogetherAndPageTop();

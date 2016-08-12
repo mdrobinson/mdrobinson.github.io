@@ -89,7 +89,7 @@
 	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 15px}
 	.social-buttons-right div{margin-left:96.2px;}
 }
-body{font-family:'Andada', 'Times New Roman', serif;font-size:18px;color:#333;position:relative;background:#FFF;}
+body{font-family:'Helvetica', 'Times New Roman', serif;font-size:18px;color:#000;position:relative;background:#FFFF8D;}
 p{line-height:1.75;margin:30px 0;}
 p a{color:#008AFF;}
 h1,h2,h3,h4,h5,h6{font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:800;}
@@ -116,7 +116,7 @@ img::-moz-selection{color:white;background:transparent;}
 .index-posts-title{font-weight:800;font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:38px;}
 @media only screen and (min-width:768px){.index-posts-title{margin-top:10px;font-size:45px;}
 }
-.navbar-custom{background:#F5F5F5;border-bottom:1px solid #EAEAEA;font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.navbar-custom{background:#FFFF8D;border-bottom:1px solid #FFFF8D;font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 .navbar-custom .nav li a{text-transform:uppercase;font-size:11px;letter-spacing:1px;}
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a{font-weight:800;color:#404040;}
@@ -136,7 +136,7 @@ img::-moz-selection{color:white;background:transparent;}
 .navbar-custom .avatar-container .avatar-img-border{width:100%;box-shadow:1px 1px 2px rgba(0, 0, 0, .8);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, .8);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, .8);}
 .navbar-custom .avatar-container .avatar-img{width:100%;}
 }
-footer{padding:30px 0;background:#F5F5F5;border-top:1px #EAEAEA solid;margin-top:50px;font-size:14px;}
+footer{padding:30px 0;background:#FFFF8D;border-top:1px #FFFF8D solid;margin-top:50px;font-size:14px;}
 footer a{color:#404040;}
 footer .list-inline{margin:0;padding:0;}
 footer .copyright{font-family:Open Sans;text-align:center;margin-bottom:0;}
@@ -145,7 +145,7 @@ footer .theme-by{text-align:center;margin:10px 0 0;}
 footer .footer-links{font-size:18px;}
 footer .copyright{font-size:16px;}
 }
-.post-preview{padding:20px 0;border-bottom:1px solid #eee;}
+.post-preview{padding:20px 0;border-bottom:1px solid #FFFF8D;}
 @media only screen and (min-width:768px){.post-preview{padding:35px 0;}
 }
 .post-preview:last-child{border-bottom:0;}
@@ -175,7 +175,7 @@ footer .copyright{font-size:16px;}
 .intro-header.big-img .post-heading .post-subheading{font-weight:700;}
 .intro-header.big-img .page-heading hr{box-shadow:1px 1px 3px #000;-webkit-box-shadow:1px 1px 3px #000;-moz-box-shadow:1px 1px 3px #000;}
 .intro-header.big-img .post-heading .post-meta{color:#EEE;}
-.intro-header.big-img .img-desc{background:rgba(30, 30, 30, 0.6);position:absolute;padding:5px 10px;font-size:11px;color:#EEE;font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;right:0;bottom:0;display:none;}
+.intro-header.big-img .img-desc{background:rgba(30, 30, 30, 0.6);position:absolute;padding:5px 10px;font-size:10px;color:#EEE;font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;right:0;bottom:0;display:none;}
 @media only screen and (min-width:768px){.intro-header{margin-top:130px;}
 .intro-header.big-img{margin-top:91px;}
 .intro-header.big-img .page-heading,
@@ -260,7 +260,7 @@ body::-webkit-scrollbar-thumb{background:darkcyan}
 }
 
 .share-buttons-label {
-	color: #ccc;
+	color: #000;
 	font-weight: bold;
 }
 
@@ -272,7 +272,7 @@ body::-webkit-scrollbar-thumb{background:darkcyan}
  .custom-social-button
  {
  	height: 30px;
- 	border-left: 1px solid #ccc;
+ 	border-left: 1px solid #000;
  	width: 33.333%;
  	text-align: center;
  	float: left;
@@ -280,14 +280,14 @@ body::-webkit-scrollbar-thumb{background:darkcyan}
 
  .custom-social-button.googleplus
  {
- 	border-right: 1px solid #ccc;
+ 	border-right: 1px solid #000;
   float: right;
  }
 
  .custom-social-button a
  {
  	vertical-align: middle;
- 	color: #ccc;
+ 	color: #000;
  	font-weight: bold;
  }
 
@@ -302,6 +302,6 @@ body::-webkit-scrollbar-thumb{background:darkcyan}
  .custom-social-button a:hover
  {
  	vertical-align: middle;
- 	color: #555;
+ 	color: #212121;
  	font-weight: bold;
  }
