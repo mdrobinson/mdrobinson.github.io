@@ -89,7 +89,7 @@
 	.social-buttons-left div li a, .social-buttons-right div li a, .social-buttons-together div li a{opacity:1;padding:15px 15px}
 	.social-buttons-right div{margin-left:96.2px;}
 }
-body{font-family:'Helvetica', 'Times New Roman', serif;font-size:18px;color:#000;position:relative;background:#FFFF8D;}
+body{font-family:'Helvetica', 'Times New Roman', serif;font-size:18px;color:#000;position:relative;background:#fff;}
 p{line-height:1.75;margin:30px 0;}
 p a{color:#008AFF;}
 h1,h2,h3,h4,h5,h6{font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:800;}
@@ -116,7 +116,7 @@ img::-moz-selection{color:white;background:transparent;}
 .index-posts-title{font-weight:800;font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:38px;}
 @media only screen and (min-width:768px){.index-posts-title{margin-top:10px;font-size:45px;}
 }
-.navbar-custom{background:#FFFF8D;border-bottom:1px solid #FFFF8D;font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.navbar-custom{background:#fff;border-bottom:1px solid #fff;font-family:'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 .navbar-custom .nav li a{text-transform:uppercase;font-size:11px;letter-spacing:1px;}
 .navbar-custom .navbar-brand,
 .navbar-custom .nav li a{font-weight:800;color:#404040;}
@@ -136,7 +136,7 @@ img::-moz-selection{color:white;background:transparent;}
 .navbar-custom .avatar-container .avatar-img-border{width:100%;box-shadow:1px 1px 2px rgba(0, 0, 0, .8);-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, .8);-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, .8);}
 .navbar-custom .avatar-container .avatar-img{width:100%;}
 }
-footer{padding:30px 0;background:#FFFF8D;border-top:1px #FFFF8D solid;margin-top:50px;font-size:14px;}
+footer{padding:30px 0;background:#fff;border-top:1px #fff solid;margin-top:50px;font-size:14px;}
 footer a{color:#404040;}
 footer .list-inline{margin:0;padding:0;}
 footer .copyright{font-family:Open Sans;text-align:center;margin-bottom:0;}
@@ -145,7 +145,7 @@ footer .theme-by{text-align:center;margin:10px 0 0;}
 footer .footer-links{font-size:18px;}
 footer .copyright{font-size:16px;}
 }
-.post-preview{padding:20px 0;border-bottom:1px solid #FFFF8D;}
+.post-preview{padding:20px 0;border-bottom:1px solid #fff;}
 @media only screen and (min-width:768px){.post-preview{padding:35px 0;}
 }
 .post-preview:last-child{border-bottom:0;}
