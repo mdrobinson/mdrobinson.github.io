@@ -30,8 +30,8 @@ navbar-links:
   Home: "home"
   About Me: "about"
 
-tag_page: '/tags/'
-category_page: '/categories/'
+tag_page: '/tags'
+category_page: '/categories'
 
 # --- Footer options --- #
 

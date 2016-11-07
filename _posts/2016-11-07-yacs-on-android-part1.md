@@ -7,7 +7,7 @@ tags: [YACS, Android]
 
 Hello RCOS!
 
-My name is Mark Robinson and at the start of this semester, I collaborated with the RPI YACS team to help build a brilliant idea.
+My name is Mark Robinson and at the start of this semester, I collaborated with the RPI YACS team to help build a brilliant idea to reality.
 
 Since the start of the semester, I've been creating the Android mobile app for YACS, called "YACS Android."
 
