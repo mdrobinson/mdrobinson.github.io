@@ -2,7 +2,7 @@
 layout: post
 title: First post!
 category: Web
-tags: [web, jekyll]
+tags: [Web, Jekyll]
 ---
 
 Hello World!

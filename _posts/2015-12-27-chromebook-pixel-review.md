@@ -2,7 +2,7 @@
 layout: post
 title: Chromebook Pixel 2015 (LS) Review
 category: Google
-tags: [chromebook, review]
+tags: [Chromebook, Review]
 ---
 
 <table align="center" style="width:194px;"><tr><td align="center" style="height:194px; no-repeat left"><img src="https://lh3.googleusercontent.com/-EcffqmbdtHA/Vn-Qx3vigkE/AAAAAAAA-zc/vmQOooDFp_k/s160-c-Ic42/Pixel2015Unboxing.jpg" width="160" height="160" style="margin:1px 0 0 4px;"></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Pixel 2015 Unboxing</a></td></tr></table>

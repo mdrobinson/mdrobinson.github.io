@@ -83,11 +83,17 @@ bigimg:
       </a>
 
       <p class=post-meta>
-        Posted on {{ post.date | date: "%B %-d, %Y" }}
+        {{ post.date | date: "%B %-d, %Y" }} 
+
+	{% if post.tags %} | 
+	    {% for tag in post.tags %}
+	        <a href="{{ site.baseurl }}{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>
+	    {% endfor %}
+	{% endif %}
       </p>
 
       <div class=post-entry>
-        {{ post.content | truncatewords: 50 | strip_html}}
+        {{ post.content | strip_html | truncatewords: 50}} 
         <a href="{{ post.url | prepend: site.baseurl }}" class=post-read-more>[Read&nbsp;More]</a>
       </div>
 

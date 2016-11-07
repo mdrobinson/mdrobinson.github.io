@@ -2,7 +2,7 @@
 layout: post
 title: "YACS on Android: Part 1"
 category: RCOS
-tags: [YACS, android]
+tags: [YACS, Android]
 ---
 
 Hello RCOS!
@@ -11,9 +11,9 @@ My name is Mark Robinson and at the start of this semester, I collaborated with 
 
 Since the start of the semester, I've been creating the Android mobile app for YACS, called "YACS Android."
 
-<table align="center" style="width:194px;"><tr><td align="center" style="height:194px; no-repeat left"><a><img src="https://lh3.googleusercontent.com/x6txbA9PNefKIPpkxR97nUjkOEqper6s1N6GdZxXGZeTQAQWKVemI_FP14P71EXaL7mXZeTxM7BreMY4CyC3Ws98BL4RQ16_enwJXkslBeAhjJEPvX-hB5lHcQmvqUQYh-W8WqVR-4QLNLetINpApzRn7s9wB7zv6YMKFu_dvyjrQzFmhvrm2kNvjLstAF-rdUijyXZ3c0wyOT25vpxT1eKpJxnTdsWG9XnuvktbIrz_Jr9IrTSo9MjRzpp0_k-KrpmsFLRgBO_ayVr0LdR6EiQWrIuVPK22Z59bqJfQN6bm7UYvjrGAhVTSe4M46pq-115BFleKHzxzleWCRBY4jcaV9lDRFk2S08ZSFuNc08i12s1SWmAe6eMsh4nM6SCxABL8gfxJ1NQVm7rXwGBgJpAk4ap_BbwJKKq29l4bulYpRu86jA_4tmO74bmk-ehx6Nfma1CYRZhAr7Dqv40KNvXYv-jDCyOZH8SmFGRCoA7vEMDUsWC2JvWfzsLDWxWZxlIvQ1aa_lA-7gsSzfmd1ZbRQQrlsESDwLjgt1_7AF4JLM24tOx1aoLpNyi3-J3KCL8I89jy_OCknyVuKyaV33KmC0s30DeiNYRWGk4L3K8OnrqUHg=w182-h320-no" width="182" height="320" style="margin:1px 0 0 4px;"></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a style="color:#4D4D4D;font-weight:bold;text-decoration:none;">App structure imagined</a></td></tr></table>
-
 I am proud to be a part of YACS, a stellar team to support my every step in building an amazing app that will reach every student on campus.
+
+<table align="center" style="width:194px;"><tr><td align="center" style="height:194px; no-repeat left"><a><img src="https://lh3.googleusercontent.com/x6txbA9PNefKIPpkxR97nUjkOEqper6s1N6GdZxXGZeTQAQWKVemI_FP14P71EXaL7mXZeTxM7BreMY4CyC3Ws98BL4RQ16_enwJXkslBeAhjJEPvX-hB5lHcQmvqUQYh-W8WqVR-4QLNLetINpApzRn7s9wB7zv6YMKFu_dvyjrQzFmhvrm2kNvjLstAF-rdUijyXZ3c0wyOT25vpxT1eKpJxnTdsWG9XnuvktbIrz_Jr9IrTSo9MjRzpp0_k-KrpmsFLRgBO_ayVr0LdR6EiQWrIuVPK22Z59bqJfQN6bm7UYvjrGAhVTSe4M46pq-115BFleKHzxzleWCRBY4jcaV9lDRFk2S08ZSFuNc08i12s1SWmAe6eMsh4nM6SCxABL8gfxJ1NQVm7rXwGBgJpAk4ap_BbwJKKq29l4bulYpRu86jA_4tmO74bmk-ehx6Nfma1CYRZhAr7Dqv40KNvXYv-jDCyOZH8SmFGRCoA7vEMDUsWC2JvWfzsLDWxWZxlIvQ1aa_lA-7gsSzfmd1ZbRQQrlsESDwLjgt1_7AF4JLM24tOx1aoLpNyi3-J3KCL8I89jy_OCknyVuKyaV33KmC0s30DeiNYRWGk4L3K8OnrqUHg=w182-h320-no" width="182" height="320" style="margin:1px 0 0 4px;"></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a style="color:#4D4D4D;font-weight:bold;text-decoration:none;">App structure imagined</a></td></tr></table>
 
 I built the foundation of YACS Android, the main activity view, using the "MaterialViewPager" and "MaterialDrawer" libraries. I linked the navigation drawer to the viewpager and found out that the libraries worked interoperably.
 

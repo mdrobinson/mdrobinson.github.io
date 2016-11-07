@@ -2,7 +2,7 @@
 layout: post
 title: "Comcast: Cord Cut"
 category: Comcast
-tags: [cordcutter]
+tags: [Cordcutter]
 ---
 
 Yesterday, I canceled my Comcast triple play subscription. In its place, I bought a Amazon Fire TV stick and subscribed to Sony's PS Vue. I started to enjoy a life almost entirely free from the grips of Comcast.

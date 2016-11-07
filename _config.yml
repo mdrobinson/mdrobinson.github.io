@@ -30,6 +30,9 @@ navbar-links:
   Home: "home"
   About Me: "about"
 
+tag_page: '/tags/'
+category_page: '/categories/'
+
 # --- Footer options --- #
 
 # Change all these values or delete the ones you don't want.
