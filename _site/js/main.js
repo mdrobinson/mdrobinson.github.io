@@ -179,5 +179,6 @@ $(".social-buttons-left")
      
      setTimeout(checkIfButtonsTogetherAndPageTop, 1000);
  }
+ 
  main.init();
  checkIfButtonsTogetherAndPageTop();
