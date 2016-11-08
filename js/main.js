@@ -118,7 +118,7 @@ $("#search-query").on('blur',function(){
 });
 
 $("#about").click(function(){
-  if(window.location.href.indexOf('-')!=-1||window.location.href.indexOf('?q')!=-1){
+  if(window.location.href.indexOf('-')!=-1||window.location.href.indexOf('?q')!=-1||window.location.href.indexOf('tags')!=-1||window.location.href.indexOf('categories')!=-1){
     window.location.href="/?about"
   }else if((window.location.href.indexOf('?q')!=-1&&window.location.href.indexOf('?about')==-1)||window.location.href.indexOf('404')!=-1){
     window.location.href="/"
@@ -133,7 +133,7 @@ $("#about").click(function(){
 });
 
 $("#home").click(function(){
-  if(window.location.href.indexOf("-")!=-1||window.location.href.indexOf('?q')!=-1||window.location.href.indexOf('404')!=-1){
+  if(window.location.href.indexOf("-")!=-1||window.location.href.indexOf('?q')!=-1||window.location.href.indexOf('404')!=-1||window.location.href.indexOf('tags')!=-1||window.location.href.indexOf('categories')!=-1){
     window.location.href="/"
   }
   if($("#about-me").hasClass("currentPage")){
