@@ -7,6 +7,17 @@
     <atom:link href="https://blog.codecornerapps.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>YACS Website Advancements</title>
+        <description>
+          
+          Hello again RCOS! At the start of November, I took on the opportunity to help improve the YACS website’s performance and security. This included improving the foundation of YACS in Docker. The YACS Docker branch will make YACS easy for colleges to deploy. The current production build of YACS uses...
+        </description>
+        <pubDate>Wed, 30 Nov 2016 00:00:00 -0500</pubDate>
+        <link>https://blog.codecornerapps.com/2016-11-30-yacs-on-android-part2</link>
+        <guid isPermaLink="true">https://blog.codecornerapps.com/2016-11-30-yacs-on-android-part2</guid>
+      </item>
+    
+      <item>
         <title>YACS on Android: Part 1</title>
         <description>
           

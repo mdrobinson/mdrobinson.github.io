@@ -4,7 +4,7 @@
   <meta http-equiv=X-UA-Compatible content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Categories</title>
+  <title>YACS Website Advancements</title>
 
   <meta name=author content="Mark Robinson" />
 
@@ -15,11 +15,11 @@
   <link rel=alternate type="application/rss+xml" title="Mark Robinson - My life into the engaging future" href="/feed.xml" />
 
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="Categories" />
+  <meta property="og:title" content="YACS Website Advancements" />
   <meta property=og:type content="website" />
 
   
-  <meta property=og:url content="https://blog.codecornerapps.com/categories/" />
+  <meta property=og:url content="https://blog.codecornerapps.com/2016-11-30-yacs-on-android-part2/" />
   
 
   
@@ -233,111 +233,171 @@
       </div>
     </nav>
 
-    
+    <div class="intro-header"></div>
+
+<div role="main" class="container">
+  
+<script id=search-results-template type="text/mustache">
+  {{#entries}}
+    <article>
+      <h3>
+        {{#date}}<small><time datetime="{{pubdate}}" pubdate>{{displaydate}}</time></small>{{/date}}
+        <a href="{{url}}">{{title}}</a>
+      </h3>
+    </article>
+  {{/entries}}
+</script>
 
 
 
-<header class='header-section '>
-
-<div class="intro-header no-img">
-  <div class=container>
-    <div class=row>
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class=page-heading>
-          <h1>Categories</h1>
-		  
-
-		  
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-</header>
-
-
-
-
-<div class="container" role="main">
+<header class="header-post">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="tags-expo">
-	  <div class="tags-expo-list">
-		      
-		          <a href="#web" class="post-tag">Web</a>
-			      
-		          <a href="#google" class="post-tag">Google</a>
-			      
-		          <a href="#comcast" class="post-tag">Comcast</a>
-			      
-		          <a href="#rcos" class="post-tag">RCOS</a>
-			      
-			        </div>
-				  <hr/>
-				    <div class="tags-expo-section">
-					        
-						    <h2 id="web">Web</h2>
-						        <ul class="tags-expo-posts">
-								      
-								              <a class="post-title" href="/2015-09-29-first-post">
-										            <li>
-												            First post!
-													          <small class="post-date">29 Sep 2015</small>
-														        </li>
-															      </a>
-															            
-																        </ul>
-																	    
-						    <h2 id="google">Google</h2>
-						        <ul class="tags-expo-posts">
-								      
-								              <a class="post-title" href="/2015-12-27-chromebook-pixel-review">
-										            <li>
-												            Chromebook Pixel 2015 (LS) Review
-													          <small class="post-date">27 Dec 2015</small>
-														        </li>
-															      </a>
-															            
-																        </ul>
-																	    
-						    <h2 id="comcast">Comcast</h2>
-						        <ul class="tags-expo-posts">
-								      
-								              <a class="post-title" href="/2016-08-10-comcast-cord-cut">
-										            <li>
-												            Comcast: Cord Cut
-													          <small class="post-date">10 Aug 2016</small>
-														        </li>
-															      </a>
-															            
-																        </ul>
-																	    
-						    <h2 id="rcos">RCOS</h2>
-						        <ul class="tags-expo-posts">
-								      
-								              <a class="post-title" href="/2016-11-30-yacs-on-android-part2">
-										            <li>
-												            YACS Website Advancements
-													          <small class="post-date">30 Nov 2016</small>
-														        </li>
-															      </a>
-															            
-								              <a class="post-title" href="/2016-11-07-yacs-on-android-part1">
-										            <li>
-												            YACS on Android: Part 1
-													          <small class="post-date">07 Nov 2016</small>
-														        </li>
-															      </a>
-															            
-																        </ul>
-																	    
-																	      </div>
+    
+    <section id=search-results style=display:none>
+      <div class=index-posts-title>Search results</div>
+      <div class=entries></div>
+      </br>
+    </section>
+
+    
+      <div class="post-heading">
+        <h1>YACS Website Advancements</h1>
+        
+        <span class="post-meta">November 30, 2016</span>
+	   | 
+	    
+	        <a href="/tags#yacs" class="post-tag">YACS</a>
+	    
+	        <a href="/tags#android" class="post-tag">Android</a>
+	    
+	
+
+      </div>
+     </div>
+  </div>
+</header>
+
+<article>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	  <p>Hello again RCOS!</p>
+
+<p>At the start of November, I took on the opportunity to help improve the YACS website’s performance and security. This included improving the foundation of YACS in Docker. The YACS Docker branch will make YACS easy for colleges to deploy.</p>
+
+<p>The current production build of YACS uses Apache. While Apache is great, Nginx has more security features and loads static files faster than Apache does. That is why we decided to migrate to Nginx from Apache.</p>
+
+<p>YACS uses the Puma web server because Puma is fast, lightweight, and both projects are based on Ruby.</p>
+
+<p>Nginx is used to proxy HTTP and HTTPS requests to the Puma server.</p>
+
+<p>I will go more in depth into my YACS Nginx configuration in my next blog post.</p>
+
+<p>Docker containers are used to keep components separated from one another. This made sure that each container could only access exposed ports explicitly defined in the Dockerfile.</p>
+
+<p>The Puma server was set up to be in its own container that’s separate from the Nginx container for security.</p>
+
+<p>When YACS used Apache, Apache took consistently over 20 ms time to first byte.</p>
+
+<p>After YACS moved to Nginx and I created and optimized the configuration files, Nginx took consistently only about 5 ms time to first byte.</p>
+
+<p>All of these improvements are coming soon.</p>
+
+<p>The YACS team and I want YACS on Docker for the improvements to efficiency and simple portability that Docker provides by use of containers.</p>
+
+<p>I have more news that I want to share about YACS Android, though that’s for another blog post.</p>
+
+	</div>
+  </div>  
+</article>
+
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <ul class="pager blog-pager">
+      
+      
+      <script type="text/javascript">
+      	window.onload = function(){
+      		var blogDomain = "http%3A%2F%2Fblog.codecornerapps.com";
+      		var pageTitle = "YACS Website Advancements";
+      		var pageTitleDashes = pageTitle.replace(/ /g, '-') + "%2F&amp;";
+      		var pageTitleSpaces = pageTitle.replace(/ /g, '%20') + "&amp;";
+      		var pageDateShort = "";
+      		var pageDateShortSlashes = pageDateShort.replace(/-/g, '%2F') + "%2F";
+
+       		var twitterPartOne = "https://twitter.com/intent/tweet?original_referer=";
+       		var twitterPartTwo = "text=";
+       		var twitterPartThree = "tw_p=tweetbutton&amp;url=";
+       		var twitterPartFour = "&amp;via=robinm8_";
+       		var twitterUrl = twitterPartOne + blogDomain + pageDateShortSlashes + pageTitleDashes + twitterPartTwo + pageTitleSpaces + twitterPartThree + window.location.href + twitterPartFour;
+       		var twitterLink = document.getElementById("twitter-link");
+       		twitterLink.onclick = function() {popUp=window.open(twitterUrl, 'popupwindow', 'scrollbars=yes,width=600,height=400');popUp.focus();return false };
+
+       		var linkedinPartOne = "http://www.linkedin.com/shareArticle?mini=true&url=";
+       		var linkedinPartTwo = "&title=";
+       		var linkedinPartThree = "&summary=";
+       		var linkedinPartFour = "&source=";
+       		var linkedinUrl = linkedinPartOne + window.location.href + linkedinPartTwo + pageTitleSpaces + linkedinPartFour + "@robinm8";
+       		var linkedInLink = document.getElementById("linkedin-link");
+       		linkedInLink.onclick = function() {popUp=window.open(linkedinUrl, 'popupwindow', 'scrollbars=yes,width=600,height=400');popUp.focus();return false };
+
+       		var googlePlusPartOne = "https://plus.google.com/share?url=";
+       		var googlePlusUrl = googlePlusPartOne + window.location.href;
+       		var googlePlusLink = document.getElementById("googleplus-link");
+       		googlePlusLink.onclick = function() {popUp=window.open(googlePlusUrl, 'popupwindow', 'scrollbars=yes,width=600,height=400');popUp.focus();return false };
+       	};
+      </script>
+
+      <div class="custom-social-buttons">
+       	<div class="share-buttons-label">
+       		<h3>Share this post</h3>
+       	</div>
+       	<div class="custom-social-button twitter">
+       		<a id="twitter-link" href="#"><i class="fa fa-twitter"></i></a>
+       	</div>
+       	<div class="custom-social-button linkedin">
+       		<a id="linkedin-link" href="#"><i class="fa fa-linkedin"></i></a>
+       	</div>
+       	<div class="custom-social-button googleplus">
+       		<a id="googleplus-link" href="#"><i class="fa fa-google-plus"></i></a>
+       	</div>
+      </div>
+      
+    </ul>
+  </div>
 </div>
 
-	  
-    </div>
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <ul class="pager blog-pager">
+      
+      <li class="previous">
+        <a href="/2016-11-07-yacs-on-android-part1" data-toggle="tooltip" data-placement="top" title="YACS on Android: Part 1">&larr; Previous Post</a>
+      </li>
+      
+      
+    </ul>
   </div>
+</div>
+
+
+
+
+
+<div class="row disqus-comments">
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <ul class="pager blog-pager">
+      <h3>Comments</h3>
+    </ul>
+    </br>
+    <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
+  </div>
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="fb-comments" data-href="https://blog.codecornerapps.com/2016-11-30-yacs-on-android-part2" data-width="750" data-include-parent="true"></div>
+  </div>
+</div>
+
+
 </div>
 
     <footer>
