@@ -4,7 +4,7 @@
   <meta http-equiv=X-UA-Compatible content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Chromebook Pixel 2015 (LS) Review</title>
+  <title>In-Depth Nginx</title>
 
   <meta name=author content="Mark Robinson" />
 
@@ -15,11 +15,11 @@
   <link rel=alternate type="application/rss+xml" title="Mark Robinson - My life into the engaging future" href="/feed.xml" />
 
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="Chromebook Pixel 2015 (LS) Review" />
+  <meta property="og:title" content="In-Depth Nginx" />
   <meta property=og:type content="website" />
 
   
-  <meta property=og:url content="https://blog.codecornerapps.com/2015-12-27-chromebook-pixel-review/" />
+  <meta property=og:url content="https://blog.codecornerapps.com/2016-12-05-In-Depth_Nginx/" />
   
 
   
@@ -262,12 +262,14 @@
 
     
       <div class="post-heading">
-        <h1>Chromebook Pixel 2015 (LS) Review</h1>
+        <h1>In-Depth Nginx</h1>
         
-        <span class="post-meta">December 27, 2015</span>
+        <span class="post-meta">December 5, 2016</span>
 	   | 
 	    
-	        <a href="/tags#review" class="post-tag">Review</a>
+	        <a href="/tags#yacs" class="post-tag">YACS</a>
+	    
+	        <a href="/tags#web" class="post-tag">Web</a>
 	    
 	
 
@@ -279,33 +281,29 @@
 <article>
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-	  <table align="center" style="width:194px;"><tr><td align="center" style="height:194px; no-repeat left"><img src="https://lh3.googleusercontent.com/-EcffqmbdtHA/Vn-Qx3vigkE/AAAAAAAA-zc/vmQOooDFp_k/s160-c-Ic42/Pixel2015Unboxing.jpg" width="160" height="160" style="margin:1px 0 0 4px;" /></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Pixel 2015 Unboxing</a></td></tr></table>
+	  <p>I am pleased to announce that YACS will soon run using Nginx with Docker. Docker makes the installation of Nginx easy by simply specifying the Nginx image name in the “docker-compose.yml” file.</p>
 
-<p>The time is finally right for me to share some thoughts about my 2015 Chromebook Pixel ludicrous speed edition. I’ve been a proud owner of a beautiful Pixel for 6 months now and it’s still my daily driver. I initially asked myself how I could live with ChromeOS. Well, I did for about a month. I put Arch Linux with the Gnome desktop environment on the metal, the first chance I got. ChromeOS limited the vast potential of the i7 CPU and the 16gb of ram inside this beast of a machine. In a way, I guess you could say that I set it free. I felt Arch Linux with Gnome truly made the Pixel shine with its gorgeous screen because Gnome has hi-dpi support with equally high resolution wallpapers that really sets the stage. As far as quality is concerned, I saw a beautiful slab of metal that surpassed that of every competitor’s.</p>
+<p>The switch from Apache to Nginx induces great performance improvements. This is because Nginx caches static files. In the “nginx.config” file that I made for YACS on Docker, I set nginx to cache images, css, js, svg, html, xml files for 30 days. Once a visitor navigates to any of those file types, nginx caches the file so it can efficiently load the file for the next visitor.</p>
 
-<table align="center" style="width:194px;"><tr><td align="center" style="height:194px; no-repeat left"><a><img src="https://lh3.googleusercontent.com/-ARmyWHZqz98/VoBWbQRe0rE/AAAAAAAA-0g/slPKvOQ0mgs/s160-c-Ic42/LetSGetStarted.jpg" width="160" height="160" style="margin:1px 0 0 4px;" /></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Let&#39;s Get Started!</a></td></tr></table>
+<p>Nginx is highly compatible with web applications, like Ruby on Rails projects (i.e. YACS.) This was accomplished by using Puma, a web server for Ruby which is concurrent and lightweight. In the docker-compose.yml file, the container for Puma exposes port 3000 to rest of the containers and does not forward the Puma service on the host machine. Since nginx is relatively simple to work with, I set up a forward proxy to the container containing Puma, which is called “web,” and forwarded ports 80 and 443 to the host machine’s ports using the “docker-compose.yml” file.</p>
 
-<p>Although ChromeOS looked nice, I quickly discovered how much it hindered the portable development potential of the Chromebook Pixel. ChromeOS simply doesn’t support the developmental tools I demand to succeed with my work. Arch Linux supports all the tools I will ever need to make applications to run smoothly. In all this time, I haven’t experienced any slowdown. The Pixel truly shines when I hook it up to my portrait-oriented monitor via a USB C adapter and write code on it. No matter what I tell the Pixel to do, this beauty of a monster never slows down. It’s quite remarkable and that’s one reason why I love my Pixel.</p>
+<p>To enforce HTTPS with strict transport security, I configured Nginx to redirect port 80 connections to port 443 with a 301 “Moved Permanently” response. As well, I set Nginx to enable use of the new http/2 protocol for its high transfer speed over the http/1 protocol.</p>
 
-<p>It’s futuristic because it wields the new USB Type C connector which I hope will become the standard in the near future. I love that the Pixel has two USB Type C ports on each side because it offers me the freedom to choose which port is best to charge. For example, in my residence hall room at Rensselaer Polytechnic Institute, my charger was plugged into the power outlet located left of my desk. I asked myself, whenever I charge my Pixel on my desk, does it makes sense to plug in the laptop on the left side? I thought it did. Unfortunately, many manufacturers still place charging ports on the right side of their laptops. While I’m talking about charging, I might as well talk about battery life and man, after a quick auto-config with TLP in addition with PowerTOP on Arch, it yields over 12 hours of battery life per charge. That’s a huge plus for students.</p>
+<p>There is another amazing feature of modern web servers which is called “OCSP (SSL) stapling.” SSL stapling verifies that the SSL certificate, from the server, is valid. The brilliance of this feature is that it allows a web server like Nginx to provide information on the validity of its own certificates rather than having the browser send a request to the certificate’s vendor every time the browser needs to check the validity of the server’s certificate. SSL stapling effectively shifts the burden of handling OCSP requests from the certificate vendors to web servers, which in turn helps users connect to YACS faster and more securely than they could if YACS was insecure.</p>
 
-<table align="center" style="width:194px;"><tr><td align="center" style="height:194px; no-repeat left"><a><img src="https://lh3.googleusercontent.com/-SpOmtAVgR6w/VoBW4h7jQAE/AAAAAAAA-0U/Ujl_GQTX_Ec/s160-c-Ic42/MeWorking.jpg" width="160" height="160" style="margin:1px 0 0 4px;" /></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a style="color:#4D4D4D;font-weight:bold;text-decoration:none;">I'm working!</a></td></tr></table>
+<p>I have overridden the Nginx default weak DHE (Ephemeral Diffie-Hellman) parameters provided by OpenSSL, by generating a 4096-bit DHE parameters file for the server that runs YACS. This ensures highly secure communications between the server and clients.</p>
 
-<p>Recently, I had an interesting thought. Here it goes. If the charger outputs about 40 Watts over USB Type C and the Pixel charges, could the Pixel charge with a mere 10 Watts (5 Volts * 2 Amps) over USB Type C to a standard USB port on my power bank? To answer that, I immediately navigated to Amazon.com and began my quest for a USB Type C cable. There were so many to choose from and most were cheap, no-name brands that can potentially damage my Pixel. Thankfully, a Google Engineer on the Pixel team named Benson Leung reviewed a myriad of USB Type C cables and accessories. One of his reviews led me to a USB Type C cable that worked well with my Pixel although it charged as fast as a turtle can travel. This means that if I forget to charge my Pixel and its lightbar turns critical red, I’ll have enough portable power in my backpack to work a bit longer and save for later.</p>
+<p>I tried to make an SSL cipher list that is compatible with many browsers while remaining very secure. The choice to set ChaCha20-Poly1305 was the most favored cipher because the server running YACS does not currently run processors that support the AES-NI instruction set. Since ChaCha-Poly is a new symmetric cipher, it means that ChaCha-Poly will compute faster than AES will on the same machine.</p>
 
-<p>Oh yes, the lightbar. Whoever designed its functionality is a genius! I found out that if I double tapped anywhere on my desktop, the vibrations carry over a long distance. For example, I have a desk next to my bed. I can be on my bed with my Pixel on the other side of my desktop, tap two times on the desktop, and the Pixel responds to the taps within milliseconds by displaying the battery level on the quadrants of the lightbar. It’s quite sensitive. I even noticed that when I plugged in the charging cable to the left side, the lightbar lit up like a wave moving from right to left and vice versa when plugged in to the right side. I also learned that if objects block the paths of the vibrations, they may not be strong enough when they eventually reach the pixel’s sensors to trigger the lightbar to light. So keep a line-of-sight path for best results.</p>
+<p>Finally, I made a Content Security Policy to enforce only loading approved asset locations and denying all others. This is to prevent XSS attacks, clickjacking, and other code injection attacks that can result from the execution of malicious third-party content.</p>
 
-<p>I even made a virtual machine (VM) of Windows 7 using VirtualBox in Arch. Virtualization is so awesome that I tinkered around and made a VM of Ubuntu within a VM of Linux Mint, within a VM of Architect Linux all inside the OS running on top of it all, Arch. Operating system inception sure is fun! While we’re on the topic of operating systems, a crazy idea came to me at the end of last summer. Initially, I got OS X Yosemite running on my Pixel before I attempted to install Arch Linux. As expected, Yosemite ran slowly in the chrooted environment just like a parasite would in real life – stealing resources from its host giving nothing in return.</p>
+<p>To optimize Nginx even further, I enabled “tcp_nopush” and “tcp_nodelay.” These options allow Nginx to send the requested data as soon as it’s available, to save resources. This greatly reduces network overhead and increases the speed at which files are sent.</p>
 
-<table align="center" style="width:194px;"><tr><td align="center" style="height:194px; no-repeat left"><a><img src="https://lh3.googleusercontent.com/-SUJ1r7LLq7E/VZIX6BomxNE/AAAAAAAA-08/NsCdgErCv4s/s160-c-Ic42/OSXYosemiteOnPixelInChroot.jpg" width="160" height="160" style="margin:1px 0 0 4px;" /></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a style="color:#4D4D4D;font-weight:bold;text-decoration:none;">OS X Yosemite On Pixel In Chroot</a></td></tr></table>
+<p>Lastly, I enabled gzip compression. This significantly reduces the size of transmitted data to client web browsers by compressing the files on the web server.</p>
 
-<p>There’s only one thing that I dislike about the Chromebook Pixel and that is the constraint on storage space. When I had only 64gb of storage to work with, I reached the limit numerous times. I figured the Pixel team must have known someone such as myself with a deep passion  would decide to put Arch Linux on the Pixel and use it as their daily driver. When I looked at the Pixel again, I saw the SD card slot. Jackpot! As usual, I loaded up Amazon.com and purchased a fast 64gb SD card. I offloaded: my Android Studio projects, web. dev. projects, SDKs, pictures, and games. In addition, I sync my files between my computers with the Syncthing application so I won’t lose my data as easily as if I only had it all on one drive. I make monthly whole-drive encrypted backups to backup everything for easy recovery if it ever comes to that.</p>
+<p>Overall, Nginx has been a pleasure to work with via Docker and I hope everyone will be able to enjoy the benefits of Nginx soon.</p>
 
-<p>Against all odds, over the course of 6 months, I had thoroughly made great use of my Pixel.</p>
-
-<table align="left" style="width:250px;"><tr><td align="center" style="height:194px; no-repeat left"><a href="https://picasaweb.google.com/102385287650654088837/Pixel2015Unboxing?authuser=0&amp;authkey=Gv1sRgCP2FjPz9iLKuLQ&amp;feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-EcffqmbdtHA/Vn-Qx3vigkE/AAAAAAAA-zc/vmQOooDFp_k/s160-c-Ic42/Pixel2015Unboxing.jpg" width="160" height="160" style="margin:1px 0 0 4px;" /></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a href="https://picasaweb.google.com/102385287650654088837/Pixel2015Unboxing?authuser=0&amp;authkey=Gv1sRgCP2FjPz9iLKuLQ&amp;feat=embedwebsite" style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Pixel 2015 Unboxing</a><br /><a href="https://picasaweb.google.com/102385287650654088837/ChromebookPixelOSXWorks?authuser=0&amp;authkey=Gv1sRgCNLhuu3PmcrbhAE&amp;feat=embedwebsite" style="color:#4D4D4D;font-weight:bold;text-decoration:none;">(Click to see more pics)</a></td></tr></table>
-
-<table align="right" style="width:250px;"><tr><td align="center" style="height:194px; no-repeat left"><a href="https://picasaweb.google.com/102385287650654088837/OSXYosemiteOnPixelInChroot?authuser=0&amp;authkey=Gv1sRgCNLhuu3PmcrbhAE&amp;feat=embedwebsite"><img src="https://lh3.googleusercontent.com/-SUJ1r7LLq7E/VZIX6BomxNE/AAAAAAAA-08/NsCdgErCv4s/s160-c-Ic42/OSXYosemiteOnPixelInChroot.jpg" width="160" height="160" style="margin:1px 0 0 4px;" /></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a href="https://picasaweb.google.com/102385287650654088837/OSXYosemiteOnPixelInChroot?authuser=0&amp;authkey=Gv1sRgCNLhuu3PmcrbhAE&amp;feat=embedwebsite" style="color:#4D4D4D;font-weight:bold;text-decoration:none;">OS X Yosemite On Pixel In Chroot</a><br /><a href="https://picasaweb.google.com/102385287650654088837/ChromebookPixelOSXWorks?authuser=0&amp;authkey=Gv1sRgCNLhuu3PmcrbhAE&amp;feat=embedwebsite" style="color:#4D4D4D;font-weight:bold;text-decoration:none;">(Click to see more pics)</a></td></tr></table>
+<p>I can’t wait for what’s in store for me next!</p>
 
 	</div>
   </div>  
@@ -319,7 +317,7 @@
       <script type="text/javascript">
       	window.onload = function(){
       		var blogDomain = "http%3A%2F%2Fblog.codecornerapps.com";
-      		var pageTitle = "Chromebook Pixel 2015 (LS) Review";
+      		var pageTitle = "In-Depth Nginx";
       		var pageTitleDashes = pageTitle.replace(/ /g, '-') + "%2F&amp;";
       		var pageTitleSpaces = pageTitle.replace(/ /g, '%20') + "&amp;";
       		var pageDateShort = "";
@@ -372,13 +370,9 @@
     <ul class="pager blog-pager">
       
       <li class="previous">
-        <a href="/2015-09-29-first-post" data-toggle="tooltip" data-placement="top" title="First post!">&larr; Previous Post</a>
+        <a href="/2016-11-30-yacs-on-android-part2" data-toggle="tooltip" data-placement="top" title="YACS Website Advancements">&larr; Previous Post</a>
       </li>
       
-      
-      <li class="next">
-        <a href="/2016-08-10-comcast-cord-cut" data-toggle="tooltip" data-placement="top" title="Comcast: Cord Cut">Next Post &rarr;</a>
-      </li>
       
     </ul>
   </div>
@@ -397,7 +391,7 @@
     <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
   </div>
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="fb-comments" data-href="https://blog.codecornerapps.com/2015-12-27-chromebook-pixel-review" data-width="750" data-include-parent="true"></div>
+      <div class="fb-comments" data-href="https://blog.codecornerapps.com/2016-12-05-In-Depth_Nginx" data-width="750" data-include-parent="true"></div>
   </div>
 </div>
 

@@ -7,6 +7,17 @@
     <atom:link href="https://blog.codecornerapps.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>In-Depth Nginx</title>
+        <description>
+          
+          I am pleased to announce that YACS will soon run using Nginx with Docker. Docker makes the installation of Nginx easy by simply specifying the Nginx image name in the “docker-compose.yml” file. The switch from Apache to Nginx induces great performance improvements. This is because Nginx caches static files. In...
+        </description>
+        <pubDate>Mon, 05 Dec 2016 00:00:00 -0500</pubDate>
+        <link>https://blog.codecornerapps.com/2016-12-05-In-Depth_Nginx</link>
+        <guid isPermaLink="true">https://blog.codecornerapps.com/2016-12-05-In-Depth_Nginx</guid>
+      </item>
+    
+      <item>
         <title>YACS Website Advancements</title>
         <description>
           
