@@ -8,10 +8,10 @@ tags: [YACS, Web]
 I am pleased to announce that YACS will soon run using Nginx with Docker. Docker makes the installation of Nginx easy by simply specifying the Nginx image name in the "docker-compose.yml" file.
 
 
-The switch from Apache to Nginx induces great performance improvements. This is because Nginx caches static files. In the "nginx.config" file that I made for YACS on Docker, I set nginx to cache images, css, js, svg, html, xml files for 30 days. Once a visitor navigates to any of those file types, nginx caches the file so it can efficiently load the file for the next visitor.
+The switch from Apache to Nginx induces great performance improvements. This is because Nginx caches static files. In the "nginx.config" file that I made for YACS on Docker, I set Nginx to cache images, css, js, svg, html, xml files for 30 days. Once a visitor navigates to any of those file types, Nginx caches the file so it can efficiently load the file for the next visitor.
 
 
-Nginx is highly compatible with web applications, like Ruby on Rails projects (i.e. YACS.) This was accomplished by using Puma, a web server for Ruby which is concurrent and lightweight. In the docker-compose.yml file, the container for Puma exposes port 3000 to rest of the containers and does not forward the Puma service on the host machine. Since nginx is relatively simple to work with, I set up a forward proxy to the container containing Puma, which is called "web," and forwarded ports 80 and 443 to the host machine's ports using the "docker-compose.yml" file.
+Nginx is highly compatible with web applications, like Ruby on Rails projects (i.e. YACS.) This was accomplished by using Puma, a web server for Ruby which is concurrent and lightweight. In the docker-compose.yml file, the container for Puma exposes port 3000 to rest of the containers and does not forward the Puma service on the host machine. Since Nginx is relatively simple to work with, I set up a forward proxy to the container containing Puma, which is called "web," and forwarded ports 80 and 443 to the host machine's ports using the "docker-compose.yml" file.
 
 
 To enforce HTTPS with strict transport security, I configured Nginx to redirect port 80 connections to port 443 with a 301 "Moved Permanently" response. As well, I set Nginx to enable use of the new http/2 protocol for its high transfer speed over the http/1 protocol.
