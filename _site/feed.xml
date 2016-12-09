@@ -7,6 +7,17 @@
     <atom:link href="https://blog.codecornerapps.com/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>End of Semester Thoughts</title>
+        <description>
+          
+          YACS Android App Update During the middle of November, I created an early concept design of the YACS courses view the way I envisioned it, using my ancient Wacom Graphire 2 tablet. I showed it to the group and the working-concept was well received by the YACS team. Soon after...
+        </description>
+        <pubDate>Thu, 08 Dec 2016 00:00:00 -0500</pubDate>
+        <link>https://blog.codecornerapps.com/2016-12-08-end-of-semester-thoughts</link>
+        <guid isPermaLink="true">https://blog.codecornerapps.com/2016-12-08-end-of-semester-thoughts</guid>
+      </item>
+    
+      <item>
         <title>In-Depth Nginx</title>
         <description>
           

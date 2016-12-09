@@ -36,6 +36,3 @@ Lastly, I enabled gzip compression. This significantly reduces the size of trans
 
 
 Overall, Nginx has been a pleasure to work with via Docker and I hope everyone will be able to enjoy the benefits of Nginx soon.
-
-
-I can’t wait for what’s in store for me next!
