@@ -2,7 +2,7 @@
 layout: post
 title: "YACS Website Advancements"
 category: RCOS
-tags: [YACS, Android]
+tags: [YACS, Web]
 ---
 
 Hello again RCOS!
