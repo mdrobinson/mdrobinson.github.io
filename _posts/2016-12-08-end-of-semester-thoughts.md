@@ -2,7 +2,7 @@
 layout: post
 title: "End of Semester Thoughts"
 category: RCOS
-tags: [YACS, Web]
+tags: [YACS, Web, Android]
 ---
 
 YACS Android App Update
@@ -18,7 +18,7 @@ I intend to continue working on YACS Android next semester. There are still a lo
 YACS On Docker
 
 
-So far, I have created two blog posts about my experiences working with the stellar YACS team to create the Docker build used by YACS. It was a long journey that started mid-November. I started with a working Dockerfile that was created and maintained by Richie, and a dream to make the secure Nginx configuration for YACS. I learned a lot by reading the Nginx docs. I used the Nginx configuration of my homelab as reference when creating the Nginx configuration for YACS, making the Nginx configuration as secure as possible.
+So far, I have created two blog posts about my experiences working with the stellar YACS team to create the Docker build used by YACS. It was a long journey that started mid-November. I started with a working Dockerfile that was created and maintained by Richie, and a dream to make the secure Nginx configuration for YACS. I learned a lot by reading the Nginx docs. I used the Nginx configuration of my homelab as reference when I created the Nginx configuration for YACS, which made the Nginx configuration as secure as possible.
 
 
 External Contribution

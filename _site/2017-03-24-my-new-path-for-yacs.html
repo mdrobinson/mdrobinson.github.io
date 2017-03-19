@@ -4,26 +4,26 @@
   <meta http-equiv=X-UA-Compatible content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>In-Depth Nginx</title>
+  <title>My New Path For YACS</title>
 
   <meta name=author content="Mark Robinson" />
 
   
 
-  <link rel="shortcut icon" type="image/x-icon" href="https://robinm8.github.io/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="http://localhost:4000/favicon.ico">
 
   <link rel=alternate type="application/rss+xml" title="Mark Robinson - My life into the enjoining future" href="/feed.xml" />
 
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="In-Depth Nginx" />
+  <meta property="og:title" content="My New Path For YACS" />
   <meta property=og:type content="website" />
 
   
-  <meta property=og:url content="https://robinm8.github.io/2016-12-05-In-Depth_Nginx/" />
+  <meta property=og:url content="http://localhost:4000/2017-03-24-my-new-path-for-yacs/" />
   
 
   
-  <meta property=og:image content="https://robinm8.github.io/img/close_up.png" />
+  <meta property=og:image content="http://localhost:4000/img/close_up.png" />
   
 
 </head>
@@ -38,7 +38,7 @@
         <span class=icon-bar></span>
         <span class=icon-bar></span>
       </button>
-      <a class=navbar-brand href="https://robinm8.github.io">Mark Robinson</a>
+      <a class=navbar-brand href="http://localhost:4000">Mark Robinson</a>
     </div>
     <div class="collapse navbar-collapse" id=main-navbar>
       <ul class="nav navbar-nav navbar-right">
@@ -68,7 +68,7 @@
         
         <div class=avatar-container>
           <div class=avatar-img-border>
-            <a href='https://robinm8.github.io'>
+            <a href='http://localhost:4000'>
               <img width="100px" class=avatar-img src="/img/close_up.png" />
             </a>
           </div>
@@ -262,14 +262,14 @@
 
     
       <div class="post-heading">
-        <h1>In-Depth Nginx</h1>
+        <h1>My New Path For YACS</h1>
         
-        <span class="post-meta">December 5, 2016</span>
+        <span class="post-meta">March 24, 2017</span>
 	   | 
 	    
-	        <a href="/tags#yacs" class="post-tag">YACS</a>
+	        <a href="/tags#background" class="post-tag">Background</a>
 	    
-	        <a href="/tags#web" class="post-tag">Web</a>
+	        <a href="/tags#yacs" class="post-tag">YACS</a>
 	    
 	
 
@@ -281,27 +281,27 @@
 <article>
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-	  <p>I am pleased to announce that YACS will soon run using Nginx with Docker. Docker makes the installation of Nginx easy by simply specifying the Nginx image name in the “docker-compose.yml” file.</p>
+	  <p>Hi everyone,</p>
 
-<p>The switch from Apache to Nginx induces great performance improvements. This is because Nginx caches static files. In the “nginx.config” file that I made for YACS on Docker, I set Nginx to cache images, css, js, svg, html, xml files for 30 days. Once a visitor navigates to any of those file types, Nginx caches the file so it can efficiently load the file for the next visitor.</p>
+<p>I would like to tell you about my background as a prologue before my next blog posts of the semester.</p>
 
-<p>Nginx is highly compatible with web applications, like Ruby on Rails projects (i.e. YACS.) This was accomplished by using Puma, a web server for Ruby which is concurrent and lightweight. In the docker-compose.yml file, the container for Puma exposes port 3000 to rest of the containers and does not forward the Puma service on the host machine. Since Nginx is relatively simple to work with, I set up a forward proxy to the container containing Puma, which is called “web,” and forwarded ports 80 and 443 to the host machine’s ports using the “docker-compose.yml” file.</p>
+<p>I have been running various flavors of the Linux kernel on my servers since 16 years old.</p>
 
-<p>To enforce HTTPS with strict transport security, I configured Nginx to redirect port 80 connections to port 443 with a 301 “Moved Permanently” response. As well, I set Nginx to enable use of the new http/2 protocol for its high transfer speed over the http/1 protocol.</p>
+<p>Since 16, my creation of GradeSmart gave me a great canvas to work on and I am excited to pass on into YACS.</p>
 
-<p>There is another amazing feature of modern web servers which is called “OCSP (SSL) stapling.” SSL stapling verifies that the SSL certificate, from the server, is valid. The brilliance of this feature is that it allows a web server like Nginx to provide information on the validity of its own certificates rather than having the browser send a request to the certificate’s vendor every time the browser needs to check the validity of the server’s certificate. SSL stapling effectively shifts the burden of handling OCSP requests from the certificate vendors to web servers, which in turn helps users connect to YACS faster and more securely than they could if YACS was insecure.</p>
+<p>GradeSmart was born initially for my Computer Science teacher out of a need to grade multiple choice exams automatically, analyze exam performance, and export data to their gradebooks digitally for Android devices. Essentially, my desire to change the world out of a need to fill a void for educators who owned Android devices.</p>
 
-<p>I have overridden the Nginx default weak DHE (Ephemeral Diffie-Hellman) parameters provided by OpenSSL, by generating a 4096-bit DHE parameters file for the server that runs YACS. This ensures highly secure communications between the server and clients.</p>
+<p>Additionally, I am a member of LOPSA.</p>
 
-<p>I tried to make an SSL cipher list that is compatible with many browsers while remaining very secure. The choice to set ChaCha20-Poly1305 was the most favored cipher because the server running YACS does not currently run processors that support the AES-NI instruction set. Since ChaCha-Poly is a new symmetric cipher, it means that ChaCha-Poly will compute faster than AES will on the same machine.</p>
+<p>With all the knowledge I learned over the years to date, my footprints are ingrained in forever maintaining and upgrading GradeSmart from its infancy to adulthood now.</p>
 
-<p>Finally, I made a Content Security Policy to enforce only loading approved asset locations and denying all others. This is to prevent XSS attacks, clickjacking, and other code injection attacks that can result from the execution of malicious third-party content.</p>
+<p>Currently, I run Arch Linux with my own patch to harden my development server’s security.</p>
 
-<p>To optimize Nginx even further, I enabled “tcp_nopush” and “tcp_nodelay.” These options allow Nginx to send the requested data as soon as it’s available, to save resources. This greatly reduces network overhead and increases the speed at which files are sent.</p>
+<p>I run CentOS on my production servers for reliability and uptime stats.</p>
 
-<p>Lastly, I enabled gzip compression. This significantly reduces the size of transmitted data to client web browsers by compressing the files on the web server.</p>
+<p>In closing I have planned, upcoming conferences to attend: USENIX LISA, Compose Conference, and Google I/O.</p>
 
-<p>Overall, Nginx has been a pleasure to work with via Docker and I hope everyone will be able to enjoy the benefits of Nginx soon.</p>
+<p>I am excited to pull what I know for the betterment of YACS future.</p>
 
 	</div>
   </div>  
@@ -315,7 +315,7 @@
       <script type="text/javascript">
       	window.onload = function(){
       		var blogDomain = "http%3A%2F%2Fblog.codecornerapps.com";
-      		var pageTitle = "In-Depth Nginx";
+      		var pageTitle = "My New Path For YACS";
       		var pageTitleDashes = pageTitle.replace(/ /g, '-') + "%2F&amp;";
       		var pageTitleSpaces = pageTitle.replace(/ /g, '%20') + "&amp;";
       		var pageDateShort = "";
@@ -368,13 +368,9 @@
     <ul class="pager blog-pager">
       
       <li class="previous">
-        <a href="/2016-11-30-yacs-on-android-part2" data-toggle="tooltip" data-placement="top" title="YACS Website Advancements">&larr; Previous Post</a>
+        <a href="/2016-12-08-end-of-semester-thoughts" data-toggle="tooltip" data-placement="top" title="End of Semester Thoughts">&larr; Previous Post</a>
       </li>
       
-      
-      <li class="next">
-        <a href="/2016-12-08-end-of-semester-thoughts" data-toggle="tooltip" data-placement="top" title="End of Semester Thoughts">Next Post &rarr;</a>
-      </li>
       
     </ul>
   </div>
@@ -393,7 +389,7 @@
     <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
   </div>
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="fb-comments" data-href="https://robinm8.github.io/2016-12-05-In-Depth_Nginx" data-width="750" data-include-parent="true"></div>
+      <div class="fb-comments" data-href="http://localhost:4000/2017-03-24-my-new-path-for-yacs" data-width="750" data-include-parent="true"></div>
   </div>
 </div>
 

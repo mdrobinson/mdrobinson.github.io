@@ -3,8 +3,19 @@
   <channel>
     <title>Mark Robinson</title>
     <description>My life into the enjoining future</description>
-    <link>https://robinm8.github.io</link>
-    <atom:link href="https://robinm8.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>My New Path For YACS</title>
+        <description>
+          
+          Hi everyone, I would like to tell you about my background as a prologue before my next blog posts of the semester. I have been running various flavors of the Linux kernel on my servers since 16 years old. Since 16, my creation of GradeSmart gave me a great canvas...
+        </description>
+        <pubDate>Fri, 24 Mar 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017-03-24-my-new-path-for-yacs</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-03-24-my-new-path-for-yacs</guid>
+      </item>
     
       <item>
         <title>End of Semester Thoughts</title>
@@ -13,8 +24,8 @@
           YACS Android App Update During the middle of November, I created an early concept design of the YACS courses view the way I envisioned it, using my ancient Wacom Graphire 2 tablet. I showed it to the group and the working-concept was well received by the YACS team. Soon after...
         </description>
         <pubDate>Thu, 08 Dec 2016 00:00:00 -0500</pubDate>
-        <link>https://robinm8.github.io/2016-12-08-end-of-semester-thoughts</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2016-12-08-end-of-semester-thoughts</guid>
+        <link>http://localhost:4000/2016-12-08-end-of-semester-thoughts</link>
+        <guid isPermaLink="true">http://localhost:4000/2016-12-08-end-of-semester-thoughts</guid>
       </item>
     
       <item>
@@ -24,8 +35,8 @@
           I am pleased to announce that YACS will soon run using Nginx with Docker. Docker makes the installation of Nginx easy by simply specifying the Nginx image name in the “docker-compose.yml” file. The switch from Apache to Nginx induces great performance improvements. This is because Nginx caches static files. In...
         </description>
         <pubDate>Mon, 05 Dec 2016 00:00:00 -0500</pubDate>
-        <link>https://robinm8.github.io/2016-12-05-In-Depth_Nginx</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2016-12-05-In-Depth_Nginx</guid>
+        <link>http://localhost:4000/2016-12-05-in-depth-nginx</link>
+        <guid isPermaLink="true">http://localhost:4000/2016-12-05-in-depth-nginx</guid>
       </item>
     
       <item>
@@ -35,8 +46,8 @@
           Hello again RCOS! At the start of November, I took on the opportunity to help improve the YACS website’s performance and security. This included improving the foundation of YACS in Docker. The YACS Docker branch will make YACS easy for colleges to deploy. The current production build of YACS uses...
         </description>
         <pubDate>Wed, 30 Nov 2016 00:00:00 -0500</pubDate>
-        <link>https://robinm8.github.io/2016-11-30-yacs-on-android-part2</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2016-11-30-yacs-on-android-part2</guid>
+        <link>http://localhost:4000/2016-11-30-yacs-website-advancements</link>
+        <guid isPermaLink="true">http://localhost:4000/2016-11-30-yacs-website-advancements</guid>
       </item>
     
       <item>
@@ -46,8 +57,8 @@
           Hello RCOS! My name is Mark Robinson and at the start of this semester, I collaborated with the RPI YACS team to help build a brilliant idea to reality. Since the start of the semester, I’ve been creating the Android mobile app for YACS, called “YACS Android.” I am proud...
         </description>
         <pubDate>Mon, 07 Nov 2016 00:00:00 -0500</pubDate>
-        <link>https://robinm8.github.io/2016-11-07-yacs-on-android-part1</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2016-11-07-yacs-on-android-part1</guid>
+        <link>http://localhost:4000/2016-11-07-yacs-on-android-part1</link>
+        <guid isPermaLink="true">http://localhost:4000/2016-11-07-yacs-on-android-part1</guid>
       </item>
     
       <item>
@@ -57,8 +68,8 @@
           Yesterday, I canceled my Comcast triple play subscription. In its place, I bought a Amazon Fire TV stick and subscribed to Sony’s PS Vue. I started to enjoy a life almost entirely free from the grips of Comcast. After reading a lot of reviews online, I bought the Arris SB6190...
         </description>
         <pubDate>Wed, 10 Aug 2016 00:00:00 -0400</pubDate>
-        <link>https://robinm8.github.io/2016-08-10-comcast-cord-cut</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2016-08-10-comcast-cord-cut</guid>
+        <link>http://localhost:4000/2016-08-10-comcast-cord-cut</link>
+        <guid isPermaLink="true">http://localhost:4000/2016-08-10-comcast-cord-cut</guid>
       </item>
     
       <item>
@@ -68,8 +79,8 @@
           Pixel 2015 Unboxing The time is finally right for me to share some thoughts about my 2015 Chromebook Pixel ludicrous speed edition. I’ve been a proud owner of a beautiful Pixel for 6 months now and it’s still my daily driver. I initially asked myself how I could live with...
         </description>
         <pubDate>Sun, 27 Dec 2015 00:00:00 -0500</pubDate>
-        <link>https://robinm8.github.io/2015-12-27-chromebook-pixel-review</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2015-12-27-chromebook-pixel-review</guid>
+        <link>http://localhost:4000/2015-12-27-chromebook-pixel-review</link>
+        <guid isPermaLink="true">http://localhost:4000/2015-12-27-chromebook-pixel-review</guid>
       </item>
     
       <item>
@@ -82,8 +93,8 @@ This is my first post, how exciting!
 
         </description>
         <pubDate>Tue, 29 Sep 2015 00:00:00 -0400</pubDate>
-        <link>https://robinm8.github.io/2015-09-29-first-post</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2015-09-29-first-post</guid>
+        <link>http://localhost:4000/2015-09-29-first-post</link>
+        <guid isPermaLink="true">http://localhost:4000/2015-09-29-first-post</guid>
       </item>
     
   </channel>
