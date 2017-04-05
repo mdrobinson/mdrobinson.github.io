@@ -4,7 +4,7 @@
   <meta http-equiv=X-UA-Compatible content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>YACS Website Advancements</title>
+  <title>Improving Nginx Configuration</title>
 
   <meta name=author content="Mark Robinson" />
 
@@ -15,11 +15,11 @@
   <link rel=alternate type="application/rss+xml" title="Mark Robinson - My life into the enjoining future" href="/feed.xml" />
 
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="YACS Website Advancements" />
+  <meta property="og:title" content="Improving Nginx Configuration" />
   <meta property=og:type content="website" />
 
   
-  <meta property=og:url content="https://robinm8.github.io/2016-11-30-yacs-website-advancements/" />
+  <meta property=og:url content="https://robinm8.github.io/2017-04-05-improving-nginx-configuration/" />
   
 
   
@@ -262,9 +262,9 @@
 
     
       <div class="post-heading">
-        <h1>YACS Website Advancements</h1>
+        <h1>Improving Nginx Configuration</h1>
         
-        <span class="post-meta">November 30, 2016</span>
+        <span class="post-meta">April 5, 2017</span>
 	   | 
 	    
 	        <a href="/tags#yacs" class="post-tag">YACS</a>
@@ -281,31 +281,19 @@
 <article>
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-	  <p>Hello again RCOS!</p>
+	  <p>Hello everyone,</p>
 
-<p>At the start of November, I took on the opportunity to help improve the YACS website’s performance and security. This included improving the foundation of YACS in Docker. The YACS Docker branch will make YACS easy for colleges to deploy.</p>
+<p>In the beginning of the semester, I was excited to continue to build YACS Android using the YACS API to create schedules as well as to help anywhere I could with the YACS team. The YACS team tasked me to optimize the Nginx configuration. Currently, YACS runs on Docker using Nginx on production and development; a system I contributed to last semester.</p>
 
-<p>The current production build of YACS uses Apache. While Apache is great, Nginx has more security features and loads static files faster than Apache does. That is why we decided to migrate to Nginx from Apache.</p>
+<p>When they asked me to optimize the Nginx configuration, I was full of energy to begin these improvements right away. It makes sense because it is YACS foundation as a reverse proxy to the YACS Ruby on Rails Puma server. I thoroughly researched the Nginx docs to contribute many improvements to the prior Nginx configuration. With each change, I rebuilt the modified Nginx container using Docker and tested it to ensure YACS speed improved, without any errors nor warnings. It was smooth sailing however, it took me weeks to do.</p>
 
-<p>YACS uses the Puma web server because Puma is fast, lightweight, and both projects are based on Ruby.</p>
+<p>So, what does this mean now that it’s in production? Well, this means that Nginx now has the capacity to handle 2048 concurrent worker connections for asynchronous requests from YACS users. Nginx now has connection limiters in place to ensure DoS attacks are blocked (prevents YACS server denial of service by a single computer.) Essentially, with the Nginx connection limiter feature, if a malicious user sends thousands of requests per minute (hammering the YACS server to its knees,) the YACS server will keep flowing and denial of service attack is blocked by Nginx. Nginx ensures all data that travels through, is up to specification including cookies. Nginx is like a “mother” to the YACS upstream puma Ruby on Rails front-end server.</p>
 
-<p>Nginx is used to proxy HTTP and HTTPS requests to the Puma server.</p>
+<p>Next up, I submitted a pull request containing the optimized Nginx configuration and Docker health check for all of YACS containers.</p>
 
-<p>I will go more in depth into my YACS Nginx configuration in my next blog post.</p>
+<p>The optimized Nginx configuration is now in place, improving YACS speed along with heightened security.</p>
 
-<p>Docker containers are used to keep components separated from one another. This made sure that each container could only access exposed ports explicitly defined in the Dockerfile.</p>
-
-<p>The Puma server was set up to be in its own container that’s separate from the Nginx container for security.</p>
-
-<p>When YACS used Apache, Apache took consistently over 20 ms time to first byte.</p>
-
-<p>After YACS moved to Nginx and I created and optimized the configuration files, Nginx took consistently only about 5 ms time to first byte.</p>
-
-<p>All of these improvements are coming soon.</p>
-
-<p>The YACS team and I want YACS on Docker for the improvements to efficiency and simple portability that Docker provides by use of containers.</p>
-
-<p>I have more news that I want to share about YACS Android, though that’s for another blog post.</p>
+<p>Until next time, I strive for the betterment of YACS.</p>
 
 	</div>
   </div>  
@@ -319,7 +307,7 @@
       <script type="text/javascript">
       	window.onload = function(){
       		var blogDomain = "http%3A%2F%2Fblog.codecornerapps.com";
-      		var pageTitle = "YACS Website Advancements";
+      		var pageTitle = "Improving Nginx Configuration";
       		var pageTitleDashes = pageTitle.replace(/ /g, '-') + "%2F&amp;";
       		var pageTitleSpaces = pageTitle.replace(/ /g, '%20') + "&amp;";
       		var pageDateShort = "";
@@ -372,13 +360,9 @@
     <ul class="pager blog-pager">
       
       <li class="previous">
-        <a href="/2016-11-07-yacs-on-android-part1" data-toggle="tooltip" data-placement="top" title="YACS on Android: Part 1">&larr; Previous Post</a>
+        <a href="/2017-03-30-yacs-pgadmin-nginx-caching" data-toggle="tooltip" data-placement="top" title="YACS pgAdmin with Nginx Caching">&larr; Previous Post</a>
       </li>
       
-      
-      <li class="next">
-        <a href="/2016-12-05-in-depth-nginx" data-toggle="tooltip" data-placement="top" title="In-Depth Nginx">Next Post &rarr;</a>
-      </li>
       
     </ul>
   </div>
@@ -397,7 +381,7 @@
     <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
   </div>
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="fb-comments" data-href="https://robinm8.github.io/2016-11-30-yacs-website-advancements" data-width="750" data-include-parent="true"></div>
+      <div class="fb-comments" data-href="https://robinm8.github.io/2017-04-05-improving-nginx-configuration" data-width="750" data-include-parent="true"></div>
   </div>
 </div>
 

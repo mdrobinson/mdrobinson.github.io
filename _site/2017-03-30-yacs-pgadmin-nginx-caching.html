@@ -4,7 +4,7 @@
   <meta http-equiv=X-UA-Compatible content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>YACS Website Advancements</title>
+  <title>YACS pgAdmin with Nginx Caching</title>
 
   <meta name=author content="Mark Robinson" />
 
@@ -15,11 +15,11 @@
   <link rel=alternate type="application/rss+xml" title="Mark Robinson - My life into the enjoining future" href="/feed.xml" />
 
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="YACS Website Advancements" />
+  <meta property="og:title" content="YACS pgAdmin with Nginx Caching" />
   <meta property=og:type content="website" />
 
   
-  <meta property=og:url content="https://robinm8.github.io/2016-11-30-yacs-website-advancements/" />
+  <meta property=og:url content="https://robinm8.github.io/2017-03-30-yacs-pgadmin-nginx-caching/" />
   
 
   
@@ -262,9 +262,9 @@
 
     
       <div class="post-heading">
-        <h1>YACS Website Advancements</h1>
+        <h1>YACS pgAdmin with Nginx Caching</h1>
         
-        <span class="post-meta">November 30, 2016</span>
+        <span class="post-meta">March 30, 2017</span>
 	   | 
 	    
 	        <a href="/tags#yacs" class="post-tag">YACS</a>
@@ -281,31 +281,41 @@
 <article>
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-	  <p>Hello again RCOS!</p>
+	  <p>Hello everyone,</p>
 
-<p>At the start of November, I took on the opportunity to help improve the YACS website’s performance and security. This included improving the foundation of YACS in Docker. The YACS Docker branch will make YACS easy for colleges to deploy.</p>
+<p>I have more updates to share.</p>
 
-<p>The current production build of YACS uses Apache. While Apache is great, Nginx has more security features and loads static files faster than Apache does. That is why we decided to migrate to Nginx from Apache.</p>
+<p>For the majority of the first half of this semester, I became obsessed with the performance metrics and devops side of YACS.</p>
 
-<p>YACS uses the Puma web server because Puma is fast, lightweight, and both projects are based on Ruby.</p>
+<p>YACS uses a postgres database to store all school, department, course, and section data.</p>
 
-<p>Nginx is used to proxy HTTP and HTTPS requests to the Puma server.</p>
+<p>Last month, I dockerized PgAdmin to give sysadmins a pretty view of the data because pgAdmin is well respected in the open source community. pgAdmin is similar to I’ll post more about pgAdmin next time.</p>
 
-<p>I will go more in depth into my YACS Nginx configuration in my next blog post.</p>
+<p>More recently, I was tasked with implementing Nginx caching.</p>
 
-<p>Docker containers are used to keep components separated from one another. This made sure that each container could only access exposed ports explicitly defined in the Dockerfile.</p>
+<p>I noticed that the API requests were consistently taking over 300 milliseconds to respond for departments with many courses. This led me to believe that Ruby was not caching the requests as it was configured to do.</p>
 
-<p>The Puma server was set up to be in its own container that’s separate from the Nginx container for security.</p>
+<p>With Nginx, I implemented caching at a level above Ruby. All resources will be cached in memory and disk for 5 minutes at a time. The request following the time limit checks if upstream file was modified. If so, Nginx responds with the latest version and caches it for subsequent requests within the next 5 minutes. Otherwise, the cached file remains the same.</p>
 
-<p>When YACS used Apache, Apache took consistently over 20 ms time to first byte.</p>
+<p>Nginx caching, if merged, will send API request responses 300 milliseconds faster than it can do currently. Currently, Nginx has to wait for Puma to run the request. Puma is the only upstream to Nginx, so Puma has to execute a postgresql query every time an API request is made, and then hand it back to Nginx.</p>
 
-<p>After YACS moved to Nginx and I created and optimized the configuration files, Nginx took consistently only about 5 ms time to first byte.</p>
+<p>From that point, Nginx efficiently sends the response back to the YACS user’s web browser.
+Nginx caching has never been merged into YACS production.</p>
 
-<p>All of these improvements are coming soon.</p>
+<!---   THIS IS COMMENTED OUT, WILL NOT DISPLAY IN POST
+Here are a few graphs comparing the speed of the year-old YACS to the speed of the latest production YACS build.
 
-<p>The YACS team and I want YACS on Docker for the improvements to efficiency and simple portability that Docker provides by use of containers.</p>
+Based on the screenshots, YACS API response time has improved by over 300 milliseconds since last year with the latest production YACS build with Docker and Nginx on Alpine OS.
 
-<p>I have more news that I want to share about YACS Android, though that’s for another blog post.</p>
+Here are two more screenshots comparing the speed of YACS master branch build to the speed of YACS staging-alpine branch build.
+
+Based on the screenshots, YACS response time has improved by over 500 milliseconds since last year with the latest YACS staging alpine build. This is mainly due to my Nginx caching, which caches YACS and YACS API requests in hot memory.
+-->
+
+<p>Now I know that YACS can handle the pressure of real multi-thousand concurrent requests via my Nginx on Docker foundation for the YACS team.</p>
+
+<p>Thanks to the YACS team for their support of my efforts to improve YACS speed, security, and automated failsafes.</p>
+
 
 	</div>
   </div>  
@@ -319,7 +329,7 @@
       <script type="text/javascript">
       	window.onload = function(){
       		var blogDomain = "http%3A%2F%2Fblog.codecornerapps.com";
-      		var pageTitle = "YACS Website Advancements";
+      		var pageTitle = "YACS pgAdmin with Nginx Caching";
       		var pageTitleDashes = pageTitle.replace(/ /g, '-') + "%2F&amp;";
       		var pageTitleSpaces = pageTitle.replace(/ /g, '%20') + "&amp;";
       		var pageDateShort = "";
@@ -372,12 +382,12 @@
     <ul class="pager blog-pager">
       
       <li class="previous">
-        <a href="/2016-11-07-yacs-on-android-part1" data-toggle="tooltip" data-placement="top" title="YACS on Android: Part 1">&larr; Previous Post</a>
+        <a href="/2017-03-29-yacs-android-is-live" data-toggle="tooltip" data-placement="top" title="YACS Android Published">&larr; Previous Post</a>
       </li>
       
       
       <li class="next">
-        <a href="/2016-12-05-in-depth-nginx" data-toggle="tooltip" data-placement="top" title="In-Depth Nginx">Next Post &rarr;</a>
+        <a href="/2017-04-05-improving-nginx-configuration" data-toggle="tooltip" data-placement="top" title="Improving Nginx Configuration">Next Post &rarr;</a>
       </li>
       
     </ul>
@@ -397,7 +407,7 @@
     <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
   </div>
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="fb-comments" data-href="https://robinm8.github.io/2016-11-30-yacs-website-advancements" data-width="750" data-include-parent="true"></div>
+      <div class="fb-comments" data-href="https://robinm8.github.io/2017-03-30-yacs-pgadmin-nginx-caching" data-width="750" data-include-parent="true"></div>
   </div>
 </div>
 
