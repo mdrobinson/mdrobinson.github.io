@@ -3,7 +3,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2017-04-13-yacs-devops-upgrade</loc>
+      <loc>https://robinm8.github.io/2017-04-13-yacs-devops-upgrade</loc>
       
         <lastmod>2017-04-13T00:00:00-04:00</lastmod>
       
@@ -18,7 +18,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2017-04-05-improving-nginx-configuration</loc>
+      <loc>https://robinm8.github.io/2017-04-05-improving-nginx-configuration</loc>
       
         <lastmod>2017-04-05T00:00:00-04:00</lastmod>
       
@@ -33,7 +33,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2017-03-30-yacs-pgadmin-nginx-caching</loc>
+      <loc>https://robinm8.github.io/2017-03-30-yacs-pgadmin-nginx-caching</loc>
       
         <lastmod>2017-03-30T00:00:00-04:00</lastmod>
       
@@ -48,7 +48,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2017-03-29-yacs-android-is-live</loc>
+      <loc>https://robinm8.github.io/2017-03-29-yacs-android-is-live</loc>
       
         <lastmod>2017-03-29T00:00:00-04:00</lastmod>
       
@@ -63,7 +63,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2017-03-26-yacs-on-android-part2</loc>
+      <loc>https://robinm8.github.io/2017-03-26-yacs-on-android-part2</loc>
       
         <lastmod>2017-03-26T00:00:00-04:00</lastmod>
       
@@ -78,7 +78,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2017-03-24-my-new-path-for-yacs</loc>
+      <loc>https://robinm8.github.io/2017-03-24-my-new-path-for-yacs</loc>
       
         <lastmod>2017-03-24T00:00:00-04:00</lastmod>
       
@@ -93,7 +93,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2016-12-08-end-of-semester-thoughts</loc>
+      <loc>https://robinm8.github.io/2016-12-08-end-of-semester-thoughts</loc>
       
         <lastmod>2016-12-08T00:00:00-05:00</lastmod>
       
@@ -108,7 +108,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2016-12-05-in-depth-nginx</loc>
+      <loc>https://robinm8.github.io/2016-12-05-in-depth-nginx</loc>
       
         <lastmod>2016-12-05T00:00:00-05:00</lastmod>
       
@@ -123,7 +123,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2016-11-30-yacs-website-advancements</loc>
+      <loc>https://robinm8.github.io/2016-11-30-yacs-website-advancements</loc>
       
         <lastmod>2016-11-30T00:00:00-05:00</lastmod>
       
@@ -138,7 +138,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2016-11-07-yacs-on-android-part1</loc>
+      <loc>https://robinm8.github.io/2016-11-07-yacs-on-android-part1</loc>
       
         <lastmod>2016-11-07T00:00:00-05:00</lastmod>
       
@@ -153,7 +153,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2016-08-10-comcast-cord-cut</loc>
+      <loc>https://robinm8.github.io/2016-08-10-comcast-cord-cut</loc>
       
         <lastmod>2016-08-10T00:00:00-04:00</lastmod>
       
@@ -168,7 +168,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2015-12-27-chromebook-pixel-review</loc>
+      <loc>https://robinm8.github.io/2015-12-27-chromebook-pixel-review</loc>
       
         <lastmod>2015-12-27T00:00:00-05:00</lastmod>
       
@@ -183,7 +183,7 @@
   
     
     <url>
-      <loc>http://localhost:4000/2015-09-29-first-post</loc>
+      <loc>https://robinm8.github.io/2015-09-29-first-post</loc>
       
         <lastmod>2015-09-29T00:00:00-04:00</lastmod>
       
@@ -199,24 +199,9 @@
   
     
     <url>
-      <loc>http://localhost:4000/404</loc>
+      <loc>https://robinm8.github.io/404</loc>
       
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/categories/</loc>
-      
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -229,24 +214,9 @@
   
     
     <url>
-      <loc>http://localhost:4000/feed.xml</loc>
+      <loc>https://robinm8.github.io/categories/</loc>
       
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/</loc>
-      
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -259,9 +229,39 @@
   
     
     <url>
-      <loc>http://localhost:4000/search/</loc>
+      <loc>https://robinm8.github.io/feed.xml</loc>
       
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://robinm8.github.io/</loc>
+      
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://robinm8.github.io/search/</loc>
+      
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -276,24 +276,9 @@
   
     
     <url>
-      <loc>http://localhost:4000/tags/</loc>
+      <loc>https://robinm8.github.io/tags/</loc>
       
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/robots.txt</loc>
-      
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -306,9 +291,9 @@
   
     
     <url>
-      <loc>http://localhost:4000/page2/</loc>
+      <loc>https://robinm8.github.io/robots.txt</loc>
       
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -321,9 +306,24 @@
   
     
     <url>
-      <loc>http://localhost:4000/page3/</loc>
+      <loc>https://robinm8.github.io/page2/</loc>
       
-        <lastmod>2017-04-13T01:57:21-04:00</lastmod>
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>https://robinm8.github.io/page3/</loc>
+      
+        <lastmod>2017-04-13T02:06:29-04:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
