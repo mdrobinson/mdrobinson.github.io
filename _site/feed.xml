@@ -7,6 +7,17 @@
     <atom:link href="https://robinm8.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>YACS on Android: Part 2</title>
+        <description>
+          
+          Hello everyone, It has been awhile since I last gave an update of YACS Android. I implemented major features of YACS in the Android app. I designed an intuitive sections view, optimized for mobile devices, back in March. The design truncates course descriptions while in collapsed state in order to...
+        </description>
+        <pubDate>Thu, 27 Apr 2017 00:00:00 -0400</pubDate>
+        <link>https://robinm8.github.io/2017-04-27-yacs-on-android-part2</link>
+        <guid isPermaLink="true">https://robinm8.github.io/2017-04-27-yacs-on-android-part2</guid>
+      </item>
+    
+      <item>
         <title>YACS DevOps Upgrade: Power of Docker</title>
         <description>
           
@@ -26,41 +37,6 @@
         <pubDate>Wed, 05 Apr 2017 00:00:00 -0400</pubDate>
         <link>https://robinm8.github.io/2017-04-05-improving-nginx-configuration</link>
         <guid isPermaLink="true">https://robinm8.github.io/2017-04-05-improving-nginx-configuration</guid>
-      </item>
-    
-      <item>
-        <title>YACS pgAdmin with Nginx Caching</title>
-        <description>
-          
-          Hello everyone, I have more updates to share. For the majority of the first half of this semester, I became obsessed with the performance metrics and devops side of YACS. YACS uses a postgres database to store all school, department, course, and section data. Last month, I dockerized PgAdmin to...
-        </description>
-        <pubDate>Thu, 30 Mar 2017 00:00:00 -0400</pubDate>
-        <link>https://robinm8.github.io/2017-03-30-yacs-pgadmin-nginx-caching</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2017-03-30-yacs-pgadmin-nginx-caching</guid>
-      </item>
-    
-      <item>
-        <title>YACS Android Published</title>
-        <description>
-          
-          
-
-        </description>
-        <pubDate>Wed, 29 Mar 2017 00:00:00 -0400</pubDate>
-        <link>https://robinm8.github.io/2017-03-29-yacs-android-is-live</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2017-03-29-yacs-android-is-live</guid>
-      </item>
-    
-      <item>
-        <title>YACS on Android: Part 2</title>
-        <description>
-          
-          
-
-        </description>
-        <pubDate>Sun, 26 Mar 2017 00:00:00 -0400</pubDate>
-        <link>https://robinm8.github.io/2017-03-26-yacs-on-android-part2</link>
-        <guid isPermaLink="true">https://robinm8.github.io/2017-03-26-yacs-on-android-part2</guid>
       </item>
     
       <item>
