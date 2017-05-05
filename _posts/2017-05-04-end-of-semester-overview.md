@@ -1,8 +1,8 @@
 ---
-layout: post
 title: End of Semester Overview
-category: RCOS
-tags: [YACS, Android, Web]
+date: 2017-05-04 23:00:00 -04:00
+type: post
+author: Mark
 ---
 
 Hello again,
@@ -19,6 +19,6 @@ Since the end of February, I worked solely on YACS Android to the end of the sem
 
 In the future, I hope to continue building YACS Android.
 
-As my sophomore year chapter draws to a close, my summer internship will be particularly exciting where I will continue my focus utilizing my years of programming experience for educators. My position as a Software Engineer will focus on school and government contracted projects with a great team. This has been a dream come true for me ever since my creation of Gradesmart app for my high school teachers to use with their Android devices.
+As my sophomore year chapter draws to a close, my summer internship will be particularly exciting where  I will continue my focus utilizing my years of programming experience with educators in mind. My position as a Software Engineer will focus on school and government contracted projects with a great team. This has been a dream come true for me ever since my creation of Gradesmart app, completed at age 16, for my high school teachers to use with their Android devices.
 
 Thanks to everyone involved, it has been yet another fulfilling semester.
