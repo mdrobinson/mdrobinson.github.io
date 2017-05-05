@@ -7,6 +7,28 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>End of Semester Overview</title>
+        <description>
+          
+          Hello again, This semester I worked on many aspects of YACS. During the first half of the semester through the end of February, I worked diligently to make YACS more stable, faster, and secure. First, I implemented failsafes in the Docker configuration to make YACS more stable. In the event...
+        </description>
+        <pubDate>Thu, 04 May 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017-05-04-end-of-semester-overview</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-05-04-end-of-semester-overview</guid>
+      </item>
+    
+      <item>
+        <title>YACS on Android: Part 2</title>
+        <description>
+          
+          Hello everyone, It has been awhile since I last gave an update of YACS Android. I implemented major features of YACS in the Android app. I designed an intuitive sections view, optimized for mobile devices, back in March. The design truncates course descriptions while in collapsed state in order to...
+        </description>
+        <pubDate>Fri, 28 Apr 2017 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2017-04-28-yacs-on-android-part2</link>
+        <guid isPermaLink="true">http://localhost:4000/2017-04-28-yacs-on-android-part2</guid>
+      </item>
+    
+      <item>
         <title>YACS DevOps Upgrade: Power of Docker</title>
         <description>
           
