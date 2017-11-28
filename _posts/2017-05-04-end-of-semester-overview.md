@@ -1,8 +1,7 @@
 ---
+layout: post
 title: End of Semester Overview
-date: 2017-05-04 23:00:00 -04:00
-type: post
-author: Mark
+category: RCOS
 tags: [YACS, Android]
 ---
 
