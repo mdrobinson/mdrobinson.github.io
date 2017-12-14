@@ -2,7 +2,7 @@
 layout: post
 title: End of Semester Overview
 category: RCOS
-tags: [YACS, Android]
+tags: [YACS Android, YACS, Android]
 ---
 
 Hello again,

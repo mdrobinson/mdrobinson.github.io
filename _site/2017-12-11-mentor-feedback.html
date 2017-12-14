@@ -4,7 +4,7 @@
   <meta http-equiv=X-UA-Compatible content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>End of Semester Thoughts</title>
+  <title>RCOS Mentoring Feedback</title>
 
   <meta name=author content="Mark Robinson" />
 
@@ -15,11 +15,11 @@
   <link rel=alternate type="application/rss+xml" title="Mark Robinson - My life into the enjoining future" href="/feed.xml" />
 
   <!-- Facebook OpenGraph tags -->
-  <meta property="og:title" content="End of Semester Thoughts" />
+  <meta property="og:title" content="RCOS Mentoring Feedback" />
   <meta property=og:type content="website" />
 
   
-  <meta property=og:url content="http://localhost:4000/2016-12-08-end-of-semester-thoughts/" />
+  <meta property=og:url content="http://localhost:4000/2017-12-11-mentor-feedback/" />
   
 
   
@@ -262,18 +262,12 @@
 
     
       <div class="post-heading">
-        <h1>End of Semester Thoughts</h1>
+        <h1>RCOS Mentoring Feedback</h1>
         
-        <span class="post-meta">December 8, 2016</span>
+        <span class="post-meta">December 11, 2017</span>
 	   | 
 	    
-	        <a href="/tags#yacs-android" class="post-tag">YACS Android</a>
-	    
-	        <a href="/tags#yacs" class="post-tag">YACS</a>
-	    
-	        <a href="/tags#android" class="post-tag">Android</a>
-	    
-	        <a href="/tags#web" class="post-tag">Web</a>
+	        <a href="/tags#mentor" class="post-tag">Mentor</a>
 	    
 	
 
@@ -285,29 +279,14 @@
 <article>
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-	  <p>YACS Android App Update</p>
+	  <p>Hello everyone,</p>
 
-<p>During the middle of November, I created an early concept design of the YACS courses view the way I envisioned it, using my ancient Wacom Graphire 2 tablet. I showed it to the group and the working-concept was well received by the YACS team. Soon after that, mock-ups followed.</p>
+<p>I am proud to announce that I was an RCOS mentor this semester.
+It was a great experience that proved benefitial to everyone. It enabled me to help a subset of RCOS teams stay on task throughout the semester.</p>
 
-<table align="center" style="width:414px;"><tr><td align="center" style="height:194px; no-repeat left"><a><img src="https://lh3.googleusercontent.com/5csWL8lCMgNQx4e8Eq7wEKjoF3ox6YECY8Mn0kaQyrGZ78HsbvoD6kVRYz53hJsCBkrdGM8q3RqVLhe7PAq_l5rM4hizuJHcYU20zLIWD_zgnvg7s9hllB7IF7nbbgaeKOH6dewdHYdpnlsC6kKxD6Z6iSI2lc8t6l4oHX6Nc8qb0F27CKhZ5kPxMB16Nt0iLtVAvCsRrFNVFHaQSjtrU38qTHrRD0ecgSW6Tc_mfX6ftz59RTSWJUF5mZxMEUXbMmR6xSffLgEEeu_NU11-G2JPG8iABDOsSEhJwoAwDI2aNyHh8C0I7jCbMfBOT_-zRnIe81SC3GN06vOTLUHvCvHWD4QuxY1YqldvmkAfy0sdCsYx6GHyurTH8hHE0lHwPXwcpW7OFZtpt0IVVrjcnGIcaNvmi7H1zp08uuIyeFiunB9P8Gz11DlexN2ARY1l3RgVWGx1-dYGsumKhR7sqbAhiPJ9M9Y6VQwmZYjFp4pIibXtiRYC7xFB6av8CMNp7cpPlJyq6iJ1fP3rhCg7Lr70gQezg7ZTi3ucVrm2J41vevN7ayiWrRvYcJ6lfW6mYgnh1RC6KxnOnbSpCxvuX_tJ63LTCyoqN0KCAvucTAgEOXK8_VYnyOw4IA0U5CUFDilsk02iWxKUYG3aVaOc-Pt46sRaQdFrmD89UGULSpI=w414-h727-no" width="414" height="727" style="margin:1px 0 0 4px;" /></a></td></tr><tr><td style="text-align:center;font-family:arial,sans-serif;font-size:11px"><a style="color:#4D4D4D;font-weight:bold;text-decoration:none;">Courses View Design</a></td></tr></table>
+<p>I am currently a junior and this will be my third semester with RCOS. In the beginning, my involvement was to strengthen security of the existing YACS. By implementing Docker, YACS website’s performance and security improved the foundation of YACS. Another feature I implemented was Nginx to replace existing Apache. With Nginx, it induced great performance improvements. This is because Nginx caches static files. In the “nginx.config” file that I made for YACS on Docker, I configured Nginx to cache images, css, js, svg, html, xml files for 30 days.</p>
 
-<p>I intend to continue working on YACS Android next semester. There are still a lot of features left to make for YACS Android, of which include the sections view, schedules view, and code a lot of application design logic.</p>
-
-<p>YACS On Docker</p>
-
-<p>So far, I have created two blog posts about my experiences working with the stellar YACS team to create the Docker build used by YACS. It was a long journey that started mid-November. I started with a working Dockerfile that was created and maintained by Richie, and a dream to make the secure Nginx configuration for YACS. I learned a lot by reading the Nginx docs. I used the Nginx configuration of my homelab as reference when I created the Nginx configuration for YACS, which made the Nginx configuration as secure as possible.</p>
-
-<p>External Contribution</p>
-
-<p>I decided to help the custom Linux kernel repository that I use on my Google Chromebook Pixel 2 laptop. Everytime I used the brightness script included with the kernel, I was irked by a typo that read “brighness” to the terminal. The typos were introduced in June of 2015. After the typos were corrected, a pull request was submitted to the kernel maintainer. The kernel maintainer reviewed my changes for about an hour, merged my pull request, and thanked me for it. Now, the script no longer has typos. The custom kernel used by many Chromebook Pixel owners to enable sound support because the sound drivers are not in the upstream mainline kernel yet. I plan to contribute to the custom kernel again soon.</p>
-
-<p>Closing Thoughts</p>
-
-<p>As the semester wraps up, It’s been satisfying to see how YACS Android and YACS on Docker has progressed. I am ending the semester feeling happy since my secure Nginx pull request was successfully merged into the official YACS docker branch today!</p>
-
-<p>Thanks everyone for all the encouraging support throughout the semester.</p>
-
-<p>I can’t wait for what’s in store for me next!</p>
+<p>I am a mentor for RCOS this junior year. I had completed a summer internship (after completing my sophomore year) that catapulted my view of how all aspects of how a tech company works efficiently. With that experience, I came away with just how many teams are involved with project ideas. As a software engineer summer intern, coding was not enough. It involves a legal team in place (whom always had the last say to any project ideas (and believe me, many ideas were scrapped) due to possible trademark and copyright infringements if the ideas came to fruition. They also have stakeholders whom you present your prototypes and progresses that you are expected to give weekly standup meetings with occasional presentations to update your work or if finished, demonstrations. Being ask to be a RCOS mentor, I hoped the teams will understand just how much are involved to just coding a project. Research and keeping what you code secured are essential proponents before anything goes live to the public.</p>
 
 	</div>
   </div>  
@@ -321,7 +300,7 @@
       <script type="text/javascript">
       	window.onload = function(){
       		var blogDomain = "http%3A%2F%2Fblog.codecornerapps.com";
-      		var pageTitle = "End of Semester Thoughts";
+      		var pageTitle = "RCOS Mentoring Feedback";
       		var pageTitleDashes = pageTitle.replace(/ /g, '-') + "%2F&amp;";
       		var pageTitleSpaces = pageTitle.replace(/ /g, '%20') + "&amp;";
       		var pageDateShort = "";
@@ -374,12 +353,12 @@
     <ul class="pager blog-pager">
       
       <li class="previous">
-        <a href="/2016-12-05-in-depth-nginx" data-toggle="tooltip" data-placement="top" title="In-Depth Nginx">&larr; Previous Post</a>
+        <a href="/2017-05-04-end-of-semester-overview" data-toggle="tooltip" data-placement="top" title="End of Semester Overview">&larr; Previous Post</a>
       </li>
       
       
       <li class="next">
-        <a href="/2017-03-24-my-new-path-for-yacs" data-toggle="tooltip" data-placement="top" title="My New Path For YACS">Next Post &rarr;</a>
+        <a href="/2017-12-12-mentor-duties" data-toggle="tooltip" data-placement="top" title="RCOS Mentor Duties">Next Post &rarr;</a>
       </li>
       
     </ul>
@@ -399,7 +378,7 @@
     <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
   </div>
   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      <div class="fb-comments" data-href="http://localhost:4000/2016-12-08-end-of-semester-thoughts" data-width="750" data-include-parent="true"></div>
+      <div class="fb-comments" data-href="http://localhost:4000/2017-12-11-mentor-feedback" data-width="750" data-include-parent="true"></div>
   </div>
 </div>
 

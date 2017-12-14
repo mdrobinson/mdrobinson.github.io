@@ -2,7 +2,7 @@
 layout: post
 title: "YACS on Android: Part 1"
 category: RCOS
-tags: [YACS, Android]
+tags: [YACS Android, Android]
 ---
 
 Hello RCOS!

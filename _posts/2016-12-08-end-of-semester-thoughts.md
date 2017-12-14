@@ -2,7 +2,7 @@
 layout: post
 title: "End of Semester Thoughts"
 category: RCOS
-tags: [YACS, Web, Android]
+tags: [YACS Android, YACS, Android, Web]
 ---
 
 YACS Android App Update
